@@ -8,9 +8,9 @@ function App() {
   return (
     <div className="App">
       <Header pagina={"Pagina Principal"} />
+      <PokemonList />
       <PokedexPage />
       <PokemonDetail />
-      <PokemonList />
     </div>
   );
 }

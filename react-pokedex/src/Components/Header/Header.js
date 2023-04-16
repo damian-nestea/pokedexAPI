@@ -1,9 +1,15 @@
 import React from 'react'
-import { HeaderContainer } from './headerStyle'
+import { HeaderContainer , PokemonLogo , HomeButton , PokedexButton } from './headerStyle'
+import Logo from '../assets/pokemonLogo.png'
 
 const Header = ( {pagina} ) => {
   return (
-    <HeaderContainer>Header da {pagina}</HeaderContainer>
+    <HeaderContainer>
+      <HomeButton>&lt; Todos Pokemons</HomeButton>
+      <PokemonLogo src={Logo}/>
+      <PokedexButton>Pokedex</PokedexButton>
+
+    </HeaderContainer>
   )
 }
 
