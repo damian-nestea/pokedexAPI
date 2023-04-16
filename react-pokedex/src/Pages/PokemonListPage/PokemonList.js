@@ -1,8 +1,13 @@
 import React from 'react'
+import { ListContainer } from './pokemonListStyle'
+import PokemonCard from '../../Components/PokemonCard/PokemonCard'
 
 const PokemonList = () => {
   return (
-    <div>PokemonList</div>
+    <ListContainer>  
+      PokemonList
+      <PokemonCard />
+    </ListContainer>
   )
 }
 
