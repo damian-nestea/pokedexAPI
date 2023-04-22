@@ -7,7 +7,6 @@ const PokedexPage = () => {
   return (
     <div>
       <Titulo>Titulo da PokedexPage</Titulo>
-      <PokemonCard />
     </div>
   )
 }
