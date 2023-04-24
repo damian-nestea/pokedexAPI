@@ -8,12 +8,16 @@ export const PokemonCardContainer = styled.article`
   justify-content:space-between;
   width: 20rem;
   height: 10rem;
-  padding: 1rem;
+  padding: 1.2rem;
   border-radius:1rem;
 `
 export const Name = styled.h2`
   color: #fff;
 `
+export const IdPokemon = styled.p`
+  color:#fff;
+`
+export const Types = styled.div``
 export const Image = styled.img`
   width: 8rem;
   position:absolute;
@@ -21,11 +25,17 @@ export const Image = styled.img`
   right:1rem;
 `
 export const DetailsLink = styled.a`
+  font-size:0.8rem;
+  color: #fff;
+  :link :visited{
+    color: #fff;
+  }
 `
 export const CaptureButton = styled.a`
+  font-size:0.9rem;
   background-color: #fff;
   border-radius: 0.5rem;
-  padding: 1rem 2rem;
+  padding: 0.5rem 2rem;
 `
 export const MainInfo = styled.div`
   display:flex;
