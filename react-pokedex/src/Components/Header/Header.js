@@ -7,7 +7,7 @@ const Header = ( {pagina} ) => {
     <HeaderContainer>
       <HomeButton>&lt; Todos Pokemons</HomeButton>
       <PokemonLogo src={Logo}/>
-      <PokedexButton>Pokedex</PokedexButton>
+      <PokedexButton href='/pokedex'>Pokedex</PokedexButton>
 
     </HeaderContainer>
   )
