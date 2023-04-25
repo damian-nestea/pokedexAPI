@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const ListContainer = styled.section`
-  background-color: gray;
+  background-color: #5e5e5e;
   display:flex;
   flex-wrap:wrap;
   justify-content:space-evenly;

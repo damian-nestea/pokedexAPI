@@ -1,13 +1,18 @@
 import React from 'react'
-import Header from '../../Components/Header/Header'
-import { Titulo } from './pokedexStyle'
+import { ListContainer , TituloPokedex } from './pokedexStyle'
 import PokemonCard from '../../Components/PokemonCard/PokemonCard'
 
 const PokedexPage = () => {
   return (
-    <div>
-      <Titulo>Titulo da PokedexPage</Titulo>
-    </div>
+    <ListContainer>
+      <TituloPokedex>Meus Pokémons</TituloPokedex>
+      <PokemonCard />
+      <PokemonCard />
+      <PokemonCard />
+      <PokemonCard />
+      <PokemonCard />
+      <PokemonCard />
+    </ListContainer>
   )
 }
 
