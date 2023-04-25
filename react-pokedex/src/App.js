@@ -9,7 +9,6 @@ import Router from './Router/Router';
 function App() {
   return (
     <div className="App">
-      <Header pagina={"Pagina Principal"} />
       <Router />
     </div>
   );

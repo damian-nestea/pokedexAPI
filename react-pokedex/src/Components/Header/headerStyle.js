@@ -23,7 +23,7 @@ export const HomeButton = styled.button`
   cursor: pointer;
 `
 
-export const PokedexButton = styled.a`
+export const PokedexButton = styled.button`
   background-color: #33A4F5;
   color: #fff;
   padding: 1rem 2.5rem;
