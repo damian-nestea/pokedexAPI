@@ -6,7 +6,7 @@ import Header from "../../Components/Header/Header";
 const PokemonList = () => {
   return (
     <>
-      <Header />
+      <Header pagina={'pokelist'} />
       <ListContainer>
         <TituloPokemonList>Todos Pokémons</TituloPokemonList>
         <PokemonCard />
