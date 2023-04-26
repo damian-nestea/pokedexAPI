@@ -11,6 +11,9 @@ export const HeaderContainer = styled.header`
 
 export const PokemonLogo = styled.img`
   width: 15rem;
+  position: absolute;
+  left:50%;
+  transform: translate(-50% , 0);
 `
 
 export const HomeButton = styled.button`
@@ -32,4 +35,7 @@ export const PokedexButton = styled.button`
   border:none;
   border-radius:0.25rem;
   cursor: pointer;
+  position: absolute;
+  right:5%;
+  transform: translate(-5% , 0);
 `
