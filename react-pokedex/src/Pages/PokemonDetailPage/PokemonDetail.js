@@ -1,11 +1,15 @@
 import React from 'react'
-import { DetailsContainer } from './pokemonDetailStyle'
+import { DetailsContainer, TituloDetails } from './pokemonDetailStyle'
+import Header from '../../Components/Header/Header'
 
 const PokemonDetail = () => {
   return (
-    <div>
-      <DetailsContainer>Section da PokemonDetail</DetailsContainer>
-    </div>
+    <>
+      <Header pagina={'details'}/>
+      <DetailsContainer>
+        <TituloDetails>Detalhes</TituloDetails>
+      </DetailsContainer>
+    </>
   )
 }
 

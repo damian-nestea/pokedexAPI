@@ -11,8 +11,11 @@ import {
   TopInfo,
   BottomInfo,
 } from "./pokemonCardStyle";
+import { useNavigate } from "react-router-dom";
+import { GoToDetailsPage } from "../../Router/coordinator";
 
 const PokemonCard = () => {
+  const navigate = useNavigate();
   return (
     <PokemonCardContainer>
       <TopInfo>
@@ -24,7 +27,7 @@ const PokemonCard = () => {
         <Image src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png" />
       </TopInfo>
       <BottomInfo>
-        <DetailsLink href="/">Detalhes</DetailsLink>
+        <DetailsLink onClick={()=>GoToDetailsPage(navigate)}>Detalhes</DetailsLink>
         <CaptureButton>Capturar!</CaptureButton>
       </BottomInfo>
     </PokemonCardContainer>

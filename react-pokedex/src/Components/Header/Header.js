@@ -14,7 +14,7 @@ const Header = ({ pagina }) => {
 
   return (
     <HeaderContainer>
-      {pagina === "pokedex" ? (
+      {pagina === "pokedex" || pagina === "details" ? (
         <HomeButton
           onClick={() => {
             GoToPokemonListPage(navigate);
@@ -26,7 +26,7 @@ const Header = ({ pagina }) => {
 
       <PokemonLogo src={Logo} />
 
-      {pagina === "pokelist" ? (
+      {pagina === "pokelist" || pagina === "details" ? (
         <PokedexButton
           onClick={() => {
             GoToPokedexPage(navigate);
