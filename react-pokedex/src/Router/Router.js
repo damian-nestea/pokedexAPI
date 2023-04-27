@@ -17,7 +17,7 @@ const Router = () => {
           element={<PokedexPage />}
         />
         <Route 
-          path='/pokemondetails'
+          path='/details'
           element={<PokemonDetail />}
         />
       </Routes>

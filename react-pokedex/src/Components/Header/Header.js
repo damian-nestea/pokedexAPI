@@ -12,29 +12,33 @@ import { useNavigate } from "react-router-dom";
 const Header = ({ pagina }) => {
   const navigate = useNavigate();
 
+  const AllPokemonsButton =
+    pagina === "pokedex" || pagina === "details" ? (
+      <HomeButton
+        onClick={() => {
+          GoToPokemonListPage(navigate);
+        }}
+      >
+        &lt; Todos Pokemons
+      </HomeButton>
+    ) : null;
+
+  const GoToPokedexButton =
+    pagina === "pokelist" ? (
+      <PokedexButton
+        onClick={() => {
+          GoToPokedexPage(navigate);
+        }}
+      >
+        Pokedex
+      </PokedexButton>
+    ) : null;
+
   return (
     <HeaderContainer>
-      {pagina === "pokedex" ? (
-        <HomeButton
-          onClick={() => {
-            GoToPokemonListPage(navigate);
-          }}
-        >
-          &lt; Todos Pokemons
-        </HomeButton>
-      ) : null}
-
+      {AllPokemonsButton}
       <PokemonLogo src={Logo} />
-
-      {pagina === "pokelist" ? (
-        <PokedexButton
-          onClick={() => {
-            GoToPokedexPage(navigate);
-          }}
-        >
-          Pokedex
-        </PokedexButton>
-      ) : null}
+      {GoToPokedexButton}
     </HeaderContainer>
   );
 };

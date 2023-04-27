@@ -30,6 +30,7 @@ export const DetailsLink = styled.a`
   :link :visited{
     color: #fff;
   }
+  cursor: pointer;
 `
 export const CaptureButton = styled.a`
   font-size:0.9rem;
