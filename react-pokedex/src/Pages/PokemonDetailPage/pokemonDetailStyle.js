@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const DetailsContainer = styled.section`
   background-color: #5e5e5e;
+  padding: 2rem;
 `
 export const TituloDetails = styled.h1`
   font-size:2rem;
