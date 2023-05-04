@@ -55,6 +55,7 @@ export const StatsContainer = styled.div`
 `;
 export const StatsLine = styled.div`
   display: flex;
+  border-bottom: 0.15rem solid #f2f2f2;
 `;
 export const LabelStats = styled.p`
   width: 20%;
