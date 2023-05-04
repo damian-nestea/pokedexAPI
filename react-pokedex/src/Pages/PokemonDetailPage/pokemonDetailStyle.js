@@ -18,7 +18,7 @@ export const DetailsContainer = styled.section`
   display: flex;
   gap: 2rem;
 `;
-export const PokemonBackAndFrontContainer = styled.div`
+export const PokemonBackAndFrontContainer = styled.section`
   width: 18rem;
   display: flex;
   flex-direction: column;
@@ -36,7 +36,7 @@ export const PokemonBackFrontPhoto = styled.div`
 export const PokemonImage = styled.img`
   width: 40%;
 `;
-export const StatsBoxContainer = styled.div`
+export const StatsBoxContainer = styled.section`
   background-color: #fff;
   width: 23rem;
   display: flex;
@@ -67,4 +67,24 @@ export const PointStats = styled.div`
   span {
     font-weight: bold;
   }
+`;
+export const BasicInfoAndMovesContainer = styled.section`
+  margin-left: 3rem;
+  display: flex;
+  gap: 5rem;
+`;
+export const BasicInfo = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  gap: 0.3rem;
+  p {
+    color: #fff;
+    font-weight: bold;
+  }
+`;
+export const NomePokemon = styled.h2`
+  color: #fff;
+  font-size:2.5rem;
+  font-weight: bold;
 `;

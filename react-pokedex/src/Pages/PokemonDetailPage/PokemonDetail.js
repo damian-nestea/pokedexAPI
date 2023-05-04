@@ -12,6 +12,9 @@ import {
   StatsLine,
   LabelStats,
   PointStats,
+  BasicInfoAndMovesContainer,
+  BasicInfo,
+  NomePokemon,
 } from "./pokemonDetailStyle";
 import Header from "../../Components/Header/Header";
 
@@ -65,6 +68,13 @@ const PokemonDetail = () => {
               </StatsLine>
             </StatsContainer>
           </StatsBoxContainer>
+          <BasicInfoAndMovesContainer>
+            <BasicInfo>
+              <p>#001</p>
+              <NomePokemon>Bulbasaur</NomePokemon>
+              <p>Grass</p>
+            </BasicInfo>
+          </BasicInfoAndMovesContainer>
         </DetailsContainer>
       </DetailsBackground>
     </>
