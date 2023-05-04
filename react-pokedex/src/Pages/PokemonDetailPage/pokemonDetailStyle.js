@@ -15,10 +15,10 @@ export const DetailsContainer = styled.section`
   background-color: #729f92;
   padding: 2rem 3rem;
   border-radius: 1rem;
-  display:flex;
-  gap:2rem;
+  display: flex;
+  gap: 2rem;
 `;
-export const PokemonBackAndFrontContainer = styled.div`
+export const PokemonBackAndFrontContainer = styled.section`
   width: 18rem;
   display: flex;
   flex-direction: column;
@@ -36,32 +36,55 @@ export const PokemonBackFrontPhoto = styled.div`
 export const PokemonImage = styled.img`
   width: 40%;
 `;
-export const StatsBoxContainer = styled.div`
-  background-color:#fff;
-  width:23rem;
-  display:flex;
-  flex-direction:column;
-  gap:2rem;
-  padding:1.3rem;
+export const StatsBoxContainer = styled.section`
+  background-color: #fff;
+  width: 23rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1.3rem;
   border-radius: 0.5rem;
-`
-export const StatsContainerTitle = styled.h3`
-  align-self:flex-start;
-`
+`;
+export const StatsContainerTitle = styled.h2`
+  align-self: flex-start;
+`;
 export const StatsContainer = styled.div`
-  display:flex;
-`
-export const LabelStats = styled.div`
-  width:20%;
-  display:flex;
-  flex-direction:column;
-  gap:0.8rem;
-  align-items:flex-end;
-`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+`;
+export const StatsLine = styled.div`
+  display: flex;
+  border-bottom: 0.15rem solid #f2f2f2;
+`;
+export const LabelStats = styled.p`
+  width: 20%;
+  text-align: right;
+`;
 export const PointStats = styled.div`
-  width:15%;
-  display:flex;
-  flex-direction:column;
-  gap:0.8rem;
-  align-items:flex-end;
-`
+  width: 13%;
+  text-align: right;
+  span {
+    font-weight: bold;
+  }
+`;
+export const BasicInfoAndMovesContainer = styled.section`
+  margin-left: 3rem;
+  display: flex;
+  gap: 5rem;
+`;
+export const BasicInfo = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  gap: 0.3rem;
+  p {
+    color: #fff;
+    font-weight: bold;
+  }
+`;
+export const NomePokemon = styled.h2`
+  color: #fff;
+  font-size:2.5rem;
+  font-weight: bold;
+`;
