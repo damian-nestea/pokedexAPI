@@ -9,6 +9,7 @@ import {
   StatsBoxContainer,
   StatsContainerTitle,
   StatsContainer,
+  StatsLine,
   LabelStats,
   PointStats,
 } from "./pokemonDetailStyle";
@@ -32,24 +33,36 @@ const PokemonDetail = () => {
           <StatsBoxContainer>
             <StatsContainerTitle>Base Stats</StatsContainerTitle>
             <StatsContainer>
-              <LabelStats>
-                <p>HP:</p>
-                <p>Attack:</p>
-                <p>Defense:</p>
-                <p>Sp. Atk:</p>
-                <p>Sp. Def:</p>
-                <p>Speed:</p>
-                <p>Total</p>
-              </LabelStats>
-              <PointStats>
-                <p>45</p>
-                <p>49</p>
-                <p>49</p>
-                <p>65</p>
-                <p>65</p>
-                <p>45</p>
-                <p>318</p>
-              </PointStats>
+              <StatsLine>
+                <LabelStats>HP:</LabelStats>
+                <PointStats>45</PointStats>
+              </StatsLine>
+              <StatsLine>
+                <LabelStats>Attack:</LabelStats>
+                <PointStats>49</PointStats>
+              </StatsLine>
+              <StatsLine>
+                <LabelStats>Defense:</LabelStats>
+                <PointStats>49</PointStats>
+              </StatsLine>
+              <StatsLine>
+                <LabelStats>Sp. Atk:</LabelStats>
+                <PointStats>65</PointStats>
+              </StatsLine>
+              <StatsLine>
+                <LabelStats>Sp. Def:</LabelStats>
+                <PointStats>65</PointStats>
+              </StatsLine>
+              <StatsLine>
+                <LabelStats>Speed:</LabelStats>
+                <PointStats>45</PointStats>
+              </StatsLine>
+              <StatsLine>
+                <LabelStats>Total</LabelStats>
+                <PointStats>
+                  <span>318</span>
+                </PointStats>
+              </StatsLine>
             </StatsContainer>
           </StatsBoxContainer>
         </DetailsContainer>
