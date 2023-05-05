@@ -27,7 +27,9 @@ const PokemonCard = () => {
         <Image src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png" />
       </TopInfo>
       <BottomInfo>
-        <DetailsLink onClick={()=>GoToDetailsPage(navigate)}>Detalhes</DetailsLink>
+        <DetailsLink onClick={() => GoToDetailsPage(navigate)}>
+          Detalhes
+        </DetailsLink>
         <CaptureButton>Capturar!</CaptureButton>
       </BottomInfo>
     </PokemonCardContainer>

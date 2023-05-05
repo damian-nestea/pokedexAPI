@@ -15,6 +15,9 @@ import {
   BasicInfoAndMovesContainer,
   BasicInfo,
   NomePokemon,
+  MovesContainer,
+  MoveItem,
+  MainImagePokemon
 } from "./pokemonDetailStyle";
 import Header from "../../Components/Header/Header";
 
@@ -74,7 +77,15 @@ const PokemonDetail = () => {
               <NomePokemon>Bulbasaur</NomePokemon>
               <p>Grass</p>
             </BasicInfo>
+            <MovesContainer>
+              <StatsContainerTitle>Moves:</StatsContainerTitle>
+              <MoveItem>Razor Wind</MoveItem>
+              <MoveItem>Sword Dance</MoveItem>
+              <MoveItem>Cut</MoveItem>
+              <MoveItem>Vine Whip</MoveItem>
+            </MovesContainer>
           </BasicInfoAndMovesContainer>
+          <MainImagePokemon src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png"/>
         </DetailsContainer>
       </DetailsBackground>
     </>
