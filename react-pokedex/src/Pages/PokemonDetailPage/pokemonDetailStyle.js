@@ -41,12 +41,12 @@ export const StatsBoxContainer = styled.section`
   width: 23rem;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  padding: 1.3rem;
+  padding: 1.5rem;
   border-radius: 0.5rem;
 `;
 export const StatsContainerTitle = styled.h2`
   align-self: flex-start;
+  margin-bottom: 1.8rem;
 `;
 export const StatsContainer = styled.div`
   display: flex;
@@ -71,6 +71,7 @@ export const PointStats = styled.div`
 export const BasicInfoAndMovesContainer = styled.section`
   margin-left: 3rem;
   display: flex;
+  flex-direction: column;
   gap: 5rem;
 `;
 export const BasicInfo = styled.div`
@@ -85,6 +86,23 @@ export const BasicInfo = styled.div`
 `;
 export const NomePokemon = styled.h2`
   color: #fff;
-  font-size:2.5rem;
+  font-size: 2.5rem;
   font-weight: bold;
+`;
+export const MovesContainer = styled.div`
+  background-color: #fff;
+  width: 18rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+`;
+export const MoveItem = styled.p`
+  background-color: #e2e2e2;
+  font-size: 0.8rem;
+  padding: 0.8rem 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
 `;
