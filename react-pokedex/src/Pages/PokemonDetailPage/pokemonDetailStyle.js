@@ -12,9 +12,10 @@ export const TituloDetails = styled.h1`
   margin-bottom: 2rem;
 `;
 export const DetailsContainer = styled.section`
+  position: relative;
   background-color: #729f92;
   padding: 2rem 3rem;
-  border-radius: 1rem;
+  border-radius: 2rem;
   display: flex;
   gap: 2rem;
 `;
@@ -100,9 +101,15 @@ export const MovesContainer = styled.div`
   border-radius: 0.5rem;
 `;
 export const MoveItem = styled.p`
-  background-color: #e2e2e2;
+  background-color: #ececec;
   font-size: 0.8rem;
   padding: 0.8rem 1rem;
   border-radius: 0.5rem;
   margin-bottom: 1rem;
+`;
+export const MainImagePokemon = styled.img`
+  width: 15rem;
+  position: absolute;
+  top: -7rem;
+  right: 2rem;
 `;
