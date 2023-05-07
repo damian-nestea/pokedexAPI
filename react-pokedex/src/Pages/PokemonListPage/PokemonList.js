@@ -1,9 +1,7 @@
 import React, { useContext } from "react";
-
 import { ListContainer, TituloPokemonList } from "./pokemonListStyle";
 import PokemonCard from "../../Components/PokemonCard/PokemonCard";
 import Header from "../../Components/Header/Header";
-
 import { GlobalContext } from "../../contexts/GlobalContext";
 
 const PokemonList = () => {

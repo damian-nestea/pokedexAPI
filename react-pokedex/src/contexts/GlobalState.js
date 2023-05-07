@@ -20,7 +20,7 @@ const GlobalState = ({ children }) => {
   };
 
   const data = {
-    pokeList
+    pokeList,
   };
   return (
     <GlobalContext.Provider value={data}>{children}</GlobalContext.Provider>
