@@ -1,12 +1,13 @@
 import './App.css';
 import Router from './Router/Router';
+import GlobalState from './contexts/GlobalState';
 
 
 function App() {
   return (
-    <div className="App">
+    <GlobalState className="App">
       <Router />
-    </div>
+    </GlobalState>
   );
 }
 

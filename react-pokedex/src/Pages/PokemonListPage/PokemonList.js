@@ -1,26 +1,16 @@
-import React, { useEffect } from "react";
-import { useState } from "react";
+import React, { useContext } from "react";
+
 import { ListContainer, TituloPokemonList } from "./pokemonListStyle";
 import PokemonCard from "../../Components/PokemonCard/PokemonCard";
 import Header from "../../Components/Header/Header";
-import axios from "axios";
-import {BASE_URL} from "../../constants/url";
+
+import { GlobalContext } from "../../contexts/GlobalContext";
 
 const PokemonList = () => {
-  const [pokemonList, setPokemonList] = useState([]);
+  const context = useContext(GlobalContext);
+  const { pokeList } = context;
 
-  useEffect(() => {
-    getAllPokemons();
-  },[])
-
-  const getAllPokemons = async () => {
-    try {
-      const res = await axios.get(`${BASE_URL}`);
-      console.log(res);
-    } catch (error) {
-      console.log(error.response);
-    }
-  };
+  console.log(pokeList);
 
   return (
     <>
