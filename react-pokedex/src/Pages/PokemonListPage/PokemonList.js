@@ -8,19 +8,14 @@ const PokemonList = () => {
   const context = useContext(GlobalContext);
   const { pokeList } = context;
 
-  console.log(pokeList);
-
   return (
     <>
       <Header pagina={"pokelist"} />
       <ListContainer>
         <TituloPokemonList>Todos Pokémons</TituloPokemonList>
-        <PokemonCard />
-        <PokemonCard />
-        <PokemonCard />
-        <PokemonCard />
-        <PokemonCard />
-        <PokemonCard />
+        {pokeList.map((pokemon, index) => (
+          <PokemonCard key={index} pokemonUrl={pokemon.url} />
+        ))}
       </ListContainer>
     </>
   );
