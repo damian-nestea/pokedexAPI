@@ -33,15 +33,19 @@ const PokemonCard = ({ pokemonUrl }) => {
     }
   };
 
+  console.log(pokemon.sprites.other.front_default);
+
   return (
     <PokemonCardContainer>
       <TopInfo>
         <MainInfo>
-          <IdPokemon>#01</IdPokemon>
+          <IdPokemon>#{pokemon.id <=9 ? `0${pokemon.id}` : pokemon.id}</IdPokemon>
           <Name>{pokemon.name}</Name>
-          <Types>Grass</Types>
+          <Types>Type</Types>
         </MainInfo>
-        <Image src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png" />
+        <Image
+          src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png`}
+        />
       </TopInfo>
       <BottomInfo>
         <DetailsLink onClick={() => GoToDetailsPage(navigate)}>
