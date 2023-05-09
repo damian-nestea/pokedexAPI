@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import {
   CaptureButton,
   PokemonCardContainer,
@@ -26,22 +26,26 @@ const PokemonCard = ({ pokemonUrl }) => {
   const fetchPokemon = async () => {
     try {
       const res = await axios.get(`${pokemonUrl}`);
-      console.log(res.data);
+      console.log(res.data.types[0].type.name);
       setPokemon(res.data);
     } catch (error) {
       console.log(error);
     }
   };
 
-  console.log(pokemon.sprites.other.front_default);
-
   return (
     <PokemonCardContainer>
       <TopInfo>
         <MainInfo>
-          <IdPokemon>#{pokemon.id <=9 ? `0${pokemon.id}` : pokemon.id}</IdPokemon>
+          <IdPokemon>
+            #{pokemon.id <= 9 ? `0${pokemon.id}` : pokemon.id}
+          </IdPokemon>
           <Name>{pokemon.name}</Name>
-          <Types>Type</Types>
+          <Types>
+            {pokemon.types.map((type, index) => (
+              <p key={index}>{type.type.name}</p>
+            ))}
+          </Types>
         </MainInfo>
         <Image
           src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png`}

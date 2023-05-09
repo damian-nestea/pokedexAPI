@@ -21,7 +21,10 @@ export const IdPokemon = styled.p`
   color: #fff;
   font-weight:bold;
 `;
-export const Types = styled.div``;
+export const Types = styled.div`
+  display:flex;
+  gap:1rem;
+`;
 export const Image = styled.img`
   width: 8rem;
   position: absolute;
