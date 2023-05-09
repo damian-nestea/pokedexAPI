@@ -20,28 +20,30 @@ const PokemonCard = ({ pokemonUrl }) => {
   const [pokemon, setPokemon] = useState({});
 
   useEffect(() => {
+    const fetchPokemon = async () => {
+      try {
+        const res = await axios.get(`${pokemonUrl}`);
+        setPokemon(res.data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
     fetchPokemon();
   }, []);
-
-  const fetchPokemon = async () => {
-    try {
-      const res = await axios.get(`${pokemonUrl}`);
-      console.log(res.data);
-      setPokemon(res.data);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  console.log(pokemon.sprites.other.front_default);
 
   return (
     <PokemonCardContainer>
       <TopInfo>
         <MainInfo>
-          <IdPokemon>#{pokemon.id <=9 ? `0${pokemon.id}` : pokemon.id}</IdPokemon>
+          <IdPokemon>
+            #{pokemon.id <= 9 ? `0${pokemon.id}` : pokemon.id}
+          </IdPokemon>
           <Name>{pokemon.name}</Name>
-          <Types>Type</Types>
+          <Types>
+            {pokemon.types.map((item, index) => (
+              <p key={index}>{item.type.name}</p>
+            ))}
+          </Types>
         </MainInfo>
         <Image
           src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png`}
