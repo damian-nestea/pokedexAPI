@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   CaptureButton,
   PokemonCardContainer,
@@ -20,18 +20,16 @@ const PokemonCard = ({ pokemonUrl }) => {
   const [pokemon, setPokemon] = useState({});
 
   useEffect(() => {
+    const fetchPokemon = async () => {
+      try {
+        const res = await axios.get(`${pokemonUrl}`);
+        setPokemon(res.data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
     fetchPokemon();
   }, []);
-
-  const fetchPokemon = async () => {
-    try {
-      const res = await axios.get(`${pokemonUrl}`);
-      console.log(res.data.types[0].type.name);
-      setPokemon(res.data);
-    } catch (error) {
-      console.log(error);
-    }
-  };
 
   return (
     <PokemonCardContainer>
@@ -42,8 +40,8 @@ const PokemonCard = ({ pokemonUrl }) => {
           </IdPokemon>
           <Name>{pokemon.name}</Name>
           <Types>
-            {pokemon.types.map((type, index) => (
-              <p key={index}>{type.type.name}</p>
+            {pokemon.types.map((item, index) => (
+              <p key={index}>{item.type.name}</p>
             ))}
           </Types>
         </MainInfo>
