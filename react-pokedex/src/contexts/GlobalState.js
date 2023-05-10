@@ -12,8 +12,17 @@ const GlobalState = ({ children }) => {
 
   const getAllPokemons = async () => {
     try {
-      const res = await axios.get(`${BASE_URL}`);
-      setPokeList(res.data.results);
+      const response = await fetch(`${BASE_URL}`);
+      const data = await response.json();
+
+      const promises = data.results.map(async(pokemon) => {
+        const response = await fetch(pokemon.url);
+        const data = await response.json();
+        return data;
+      })
+      const result = await Promise.all(promises);
+      setPokeList(result);
+
     } catch (error) {
       console.log(error.response);
     }

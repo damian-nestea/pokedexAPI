@@ -40,9 +40,10 @@ const PokemonCard = ({ pokemonUrl }) => {
           </IdPokemon>
           <Name>{pokemon.name}</Name>
           <Types>
-            {pokemon.types.map((item, index) => (
+            Type
+            {/* {pokemon.types.map((item, index) => (
               <p key={index}>{item.type.name}</p>
-            ))}
+            ))} */}
           </Types>
         </MainInfo>
         <Image
@@ -50,7 +51,7 @@ const PokemonCard = ({ pokemonUrl }) => {
         />
       </TopInfo>
       <BottomInfo>
-        <DetailsLink onClick={() => GoToDetailsPage(navigate)}>
+        <DetailsLink onClick={() => {GoToDetailsPage(navigate)}}>
           Detalhes
         </DetailsLink>
         <CaptureButton>Capturar!</CaptureButton>
