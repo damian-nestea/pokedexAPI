@@ -45,32 +45,37 @@ const PokemonDetail = () => {
             <StatsContainer>
               <StatsLine>
                 <LabelStats>HP:</LabelStats>
-                <PointStats>45</PointStats>
+                <PointStats>{activePokemon.stats[0].base_stat}</PointStats>
               </StatsLine>
               <StatsLine>
                 <LabelStats>Attack:</LabelStats>
-                <PointStats>49</PointStats>
+                <PointStats>{activePokemon.stats[0].base_stat}</PointStats>
               </StatsLine>
               <StatsLine>
                 <LabelStats>Defense:</LabelStats>
-                <PointStats>49</PointStats>
+                <PointStats>{activePokemon.stats[2].base_stat}</PointStats>
               </StatsLine>
               <StatsLine>
                 <LabelStats>Sp. Atk:</LabelStats>
-                <PointStats>65</PointStats>
+                <PointStats>{activePokemon.stats[3].base_stat}</PointStats>
               </StatsLine>
               <StatsLine>
                 <LabelStats>Sp. Def:</LabelStats>
-                <PointStats>65</PointStats>
+                <PointStats>{activePokemon.stats[0].base_stat}</PointStats>
               </StatsLine>
               <StatsLine>
                 <LabelStats>Speed:</LabelStats>
-                <PointStats>45</PointStats>
+                <PointStats>{activePokemon.stats[0].base_stat}</PointStats>
               </StatsLine>
               <StatsLine>
                 <LabelStats>Total</LabelStats>
                 <PointStats>
-                  <span>318</span>
+                  <span>
+                    {activePokemon.stats.reduce(
+                      (total, item) => total + item.base_stat,
+                      0
+                    )}
+                  </span>
                 </PointStats>
               </StatsLine>
             </StatsContainer>
@@ -84,7 +89,9 @@ const PokemonDetail = () => {
                   : `0${activePokemon.id}`}
               </p>
               <NomePokemon>{activePokemon.name}</NomePokemon>
-              {activePokemon.types.map(type => (<p>{type.type.name}</p>))}
+              {activePokemon.types.map((type) => (
+                <p>{type.type.name}</p>
+              ))}
             </BasicInfo>
             <MovesContainer>
               <StatsContainerTitle>Moves:</StatsContainerTitle>
@@ -94,7 +101,9 @@ const PokemonDetail = () => {
               <MoveItem>Vine Whip</MoveItem>
             </MovesContainer>
           </BasicInfoAndMovesContainer>
-          <MainImagePokemon src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${activePokemon.id}.png`} />
+          <MainImagePokemon
+            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${activePokemon.id}.png`}
+          />
         </DetailsContainer>
       </DetailsBackground>
     </>
