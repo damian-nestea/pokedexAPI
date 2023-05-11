@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { GlobalContext } from "./GlobalContext";
-import axios from "axios";
 import { BASE_URL } from "../constants/url";
 
 const GlobalState = ({ children }) => {

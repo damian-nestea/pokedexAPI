@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import {
   CaptureButton,
   PokemonCardContainer,
@@ -13,23 +13,9 @@ import {
 } from "./pokemonCardStyle";
 import { useNavigate } from "react-router-dom";
 import { GoToDetailsPage } from "../../Router/coordinator";
-import axios from "axios";
 
-const PokemonCard = ({ pokemonUrl }) => {
+const PokemonCard = ({ pokemon }) => {
   const navigate = useNavigate();
-  const [pokemon, setPokemon] = useState({});
-
-  useEffect(() => {
-    const fetchPokemon = async () => {
-      try {
-        const res = await axios.get(`${pokemonUrl}`);
-        setPokemon(res.data);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-    fetchPokemon();
-  }, []);
 
   return (
     <PokemonCardContainer>
@@ -40,10 +26,9 @@ const PokemonCard = ({ pokemonUrl }) => {
           </IdPokemon>
           <Name>{pokemon.name}</Name>
           <Types>
-            Type
-            {/* {pokemon.types.map((item, index) => (
+            {pokemon.types.map((item, index) => (
               <p key={index}>{item.type.name}</p>
-            ))} */}
+            ))}
           </Types>
         </MainInfo>
         <Image
@@ -51,7 +36,11 @@ const PokemonCard = ({ pokemonUrl }) => {
         />
       </TopInfo>
       <BottomInfo>
-        <DetailsLink onClick={() => {GoToDetailsPage(navigate)}}>
+        <DetailsLink
+          onClick={() => {
+            GoToDetailsPage(navigate);
+          }}
+        >
           Detalhes
         </DetailsLink>
         <CaptureButton>Capturar!</CaptureButton>
