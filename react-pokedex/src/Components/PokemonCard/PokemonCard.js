@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext } from "react";
 import {
   CaptureButton,
   PokemonCardContainer,
@@ -13,23 +13,12 @@ import {
 } from "./pokemonCardStyle";
 import { useNavigate } from "react-router-dom";
 import { GoToDetailsPage } from "../../Router/coordinator";
-import axios from "axios";
+import { GlobalContext } from "../../contexts/GlobalContext";
 
-const PokemonCard = ({ pokemonUrl }) => {
+const PokemonCard = ({ pokemon }) => {
   const navigate = useNavigate();
-  const [pokemon, setPokemon] = useState({});
-
-  useEffect(() => {
-    const fetchPokemon = async () => {
-      try {
-        const res = await axios.get(`${pokemonUrl}`);
-        setPokemon(res.data);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-    fetchPokemon();
-  }, []);
+  const context = useContext(GlobalContext);
+  const { setActivePokemon, activePokemon } = context;
 
   return (
     <PokemonCardContainer>
@@ -50,7 +39,12 @@ const PokemonCard = ({ pokemonUrl }) => {
         />
       </TopInfo>
       <BottomInfo>
-        <DetailsLink onClick={() => GoToDetailsPage(navigate)}>
+        <DetailsLink
+          onClick={() => {
+            setActivePokemon(pokemon);
+            GoToDetailsPage(navigate);
+          }}
+        >
           Detalhes
         </DetailsLink>
         <CaptureButton>Capturar!</CaptureButton>

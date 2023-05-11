@@ -35,7 +35,7 @@ export const PokemonBackFrontPhoto = styled.div`
   border-radius: 0.5rem;
 `;
 export const PokemonImage = styled.img`
-  width: 40%;
+  width: 60%;
 `;
 export const StatsBoxContainer = styled.section`
   background-color: #fff;
@@ -89,6 +89,9 @@ export const NomePokemon = styled.h2`
   color: #fff;
   font-size: 2.5rem;
   font-weight: bold;
+  ::first-letter {
+    text-transform: uppercase;
+  }
 `;
 export const MovesContainer = styled.div`
   background-color: #fff;
@@ -108,7 +111,7 @@ export const MoveItem = styled.p`
   margin-bottom: 1rem;
 `;
 export const MainImagePokemon = styled.img`
-  width: 15rem;
+  width: 17rem;
   position: absolute;
   top: -7rem;
   right: 2rem;

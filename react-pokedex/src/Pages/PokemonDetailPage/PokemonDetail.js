@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import {
   DetailsBackground,
   TituloDetails,
@@ -17,11 +17,15 @@ import {
   NomePokemon,
   MovesContainer,
   MoveItem,
-  MainImagePokemon
+  MainImagePokemon,
 } from "./pokemonDetailStyle";
 import Header from "../../Components/Header/Header";
+import { GlobalContext } from "../../contexts/GlobalContext";
 
 const PokemonDetail = () => {
+  const context = useContext(GlobalContext);
+  const { activePokemon } = context;
+  console.log(activePokemon);
   return (
     <>
       <Header pagina={"details"} />
@@ -30,10 +34,10 @@ const PokemonDetail = () => {
         <DetailsContainer>
           <PokemonBackAndFrontContainer>
             <PokemonBackFrontPhoto>
-              <PokemonImage src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png" />
+              <PokemonImage src={activePokemon.sprites.front_default} />
             </PokemonBackFrontPhoto>
             <PokemonBackFrontPhoto>
-              <PokemonImage src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png" />
+              <PokemonImage src={activePokemon.sprites.back_default} />
             </PokemonBackFrontPhoto>
           </PokemonBackAndFrontContainer>
           <StatsBoxContainer>
@@ -73,9 +77,14 @@ const PokemonDetail = () => {
           </StatsBoxContainer>
           <BasicInfoAndMovesContainer>
             <BasicInfo>
-              <p>#001</p>
-              <NomePokemon>Bulbasaur</NomePokemon>
-              <p>Grass</p>
+              <p>
+                #0
+                {activePokemon.id > 9
+                  ? activePokemon.id
+                  : `0${activePokemon.id}`}
+              </p>
+              <NomePokemon>{activePokemon.name}</NomePokemon>
+              {activePokemon.types.map(type => (<p>{type.type.name}</p>))}
             </BasicInfo>
             <MovesContainer>
               <StatsContainerTitle>Moves:</StatsContainerTitle>
@@ -85,7 +94,7 @@ const PokemonDetail = () => {
               <MoveItem>Vine Whip</MoveItem>
             </MovesContainer>
           </BasicInfoAndMovesContainer>
-          <MainImagePokemon src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png"/>
+          <MainImagePokemon src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${activePokemon.id}.png`} />
         </DetailsContainer>
       </DetailsBackground>
     </>
