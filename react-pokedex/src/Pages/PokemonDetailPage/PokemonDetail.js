@@ -49,7 +49,7 @@ const PokemonDetail = () => {
               </StatsLine>
               <StatsLine>
                 <LabelStats>Attack:</LabelStats>
-                <PointStats>{activePokemon.stats[1].base_stat}</PointStats>
+                <PointStats>{activePokemon.stats[0].base_stat}</PointStats>
               </StatsLine>
               <StatsLine>
                 <LabelStats>Defense:</LabelStats>
