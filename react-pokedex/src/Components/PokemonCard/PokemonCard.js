@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import {
   CaptureButton,
   PokemonCardContainer,
@@ -13,9 +13,12 @@ import {
 } from "./pokemonCardStyle";
 import { useNavigate } from "react-router-dom";
 import { GoToDetailsPage } from "../../Router/coordinator";
+import { GlobalContext } from "../../contexts/GlobalContext";
 
 const PokemonCard = ({ pokemon }) => {
   const navigate = useNavigate();
+  const context = useContext(GlobalContext);
+  const { setActivePokemon, activePokemon } = context;
 
   return (
     <PokemonCardContainer>
@@ -38,6 +41,7 @@ const PokemonCard = ({ pokemon }) => {
       <BottomInfo>
         <DetailsLink
           onClick={() => {
+            setActivePokemon(pokemon);
             GoToDetailsPage(navigate);
           }}
         >
