@@ -35,7 +35,7 @@ export const PokemonBackFrontPhoto = styled.div`
   border-radius: 0.5rem;
 `;
 export const PokemonImage = styled.img`
-  width: 40%;
+  width: 60%;
 `;
 export const StatsBoxContainer = styled.section`
   background-color: #fff;

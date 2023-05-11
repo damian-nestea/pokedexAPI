@@ -19,11 +19,11 @@ export const Name = styled.h2`
 `;
 export const IdPokemon = styled.p`
   color: #fff;
-  font-weight:bold;
+  font-weight: bold;
 `;
 export const Types = styled.div`
-  display:flex;
-  gap:1rem;
+  display: flex;
+  gap: 1rem;
 `;
 export const Image = styled.img`
   width: 8rem;
@@ -34,6 +34,7 @@ export const Image = styled.img`
 export const DetailsLink = styled.a`
   font-size: 0.8rem;
   color: #fff;
+  text-decoration: underline;
   :link :visited {
     color: #fff;
   }
