@@ -9,9 +9,7 @@ const PokedexPage = () => {
       <Header pagina={'pokedex'} />
       <ListContainer>
         <TituloPokedex>Meus Pokémons</TituloPokedex>
-        <PokemonCard />
-        <PokemonCard />
-        <PokemonCard />
+        
       </ListContainer>
     </>
   );
