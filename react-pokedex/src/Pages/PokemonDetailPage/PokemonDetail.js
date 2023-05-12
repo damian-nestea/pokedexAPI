@@ -24,8 +24,10 @@ import { GlobalContext } from "../../contexts/GlobalContext";
 
 const PokemonDetail = () => {
   const context = useContext(GlobalContext);
-  const { activePokemon } = context;
-  console.log(activePokemon);
+  const { activePokemon, getPokemonMoves } = context;
+
+  console.log(activePokemon)
+
   return (
     <>
       <Header pagina={"details"} />
@@ -95,10 +97,9 @@ const PokemonDetail = () => {
             </BasicInfo>
             <MovesContainer>
               <StatsContainerTitle>Moves:</StatsContainerTitle>
-              <MoveItem>Razor Wind</MoveItem>
-              <MoveItem>Sword Dance</MoveItem>
-              <MoveItem>Cut</MoveItem>
-              <MoveItem>Vine Whip</MoveItem>
+              {getPokemonMoves(activePokemon).map((move, index) => (
+                <MoveItem key={index}>{move}</MoveItem>
+              ))}
             </MovesContainer>
           </BasicInfoAndMovesContainer>
           <MainImagePokemon

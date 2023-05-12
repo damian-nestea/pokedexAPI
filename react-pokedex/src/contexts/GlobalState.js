@@ -27,10 +27,21 @@ const GlobalState = ({ children }) => {
     }
   };
 
+  const getPokemonMoves = (pokemon) => {
+    let pokemonMoves = [];
+    for (let i = 0; i < pokemon.moves.length; i++) {
+      i != 6
+        ? pokemonMoves.push(pokemon.moves[i].move.name)
+        : (i = pokemon.moves.length);
+    }
+    return pokemonMoves;
+  };
+
   const data = {
     pokeList,
     activePokemon,
     setActivePokemon,
+    getPokemonMoves,
   };
   return (
     <GlobalContext.Provider value={data}>{children}</GlobalContext.Provider>

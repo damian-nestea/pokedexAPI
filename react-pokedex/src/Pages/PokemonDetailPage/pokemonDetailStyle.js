@@ -109,6 +109,9 @@ export const MoveItem = styled.p`
   padding: 0.8rem 1rem;
   border-radius: 0.5rem;
   margin-bottom: 1rem;
+  ::first-letter {
+    text-transform: uppercase;
+  }
 `;
 export const MainImagePokemon = styled.img`
   width: 17rem;
