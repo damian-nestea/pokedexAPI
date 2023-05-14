@@ -89,8 +89,8 @@ const PokemonDetail = () => {
                   : `0${activePokemon.id}`}
               </p>
               <NomePokemon>{activePokemon.name}</NomePokemon>
-              {activePokemon.types.map((type) => (
-                <p>{type.type.name}</p>
+              {activePokemon.types.map((type, index) => (
+                <p key={index}>{type.type.name}</p>
               ))}
             </BasicInfo>
             <MovesContainer>
