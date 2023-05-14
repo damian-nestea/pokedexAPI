@@ -47,6 +47,14 @@ export const CaptureButton = styled.a`
   padding: 0.5rem 2rem;
   cursor: pointer;
 `;
+export const RemoveButton = styled.a`
+  font-size: 0.9rem;
+  background-color: #ff6262;
+  color: #fff;
+  border-radius: 0.5rem;
+  padding: 0.5rem 2rem;
+  cursor: pointer;
+`;
 export const MainInfo = styled.div`
   display: flex;
   flex-direction: column;

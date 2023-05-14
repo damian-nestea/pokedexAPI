@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import {
   CaptureButton,
+  RemoveButton,
   PokemonCardContainer,
   DetailsLink,
   Image,
@@ -15,7 +16,7 @@ import { useNavigate } from "react-router-dom";
 import { GoToDetailsPage } from "../../Router/coordinator";
 import { GlobalContext } from "../../contexts/GlobalContext";
 
-const PokemonCard = ({ pokemon }) => {
+const PokemonCard = ({ pokemon, page }) => {
   const navigate = useNavigate();
   const context = useContext(GlobalContext);
   const { setActivePokemon, addPokemonToPokedex } = context;
@@ -47,13 +48,17 @@ const PokemonCard = ({ pokemon }) => {
         >
           Detalhes
         </DetailsLink>
-        <CaptureButton
-          onClick={() => {
-            addPokemonToPokedex(pokemon);
-          }}
-        >
-          Capturar!
-        </CaptureButton>
+        {page === "pokelist" ? (
+          <CaptureButton
+            onClick={() => {
+              addPokemonToPokedex(pokemon);
+            }}
+          >
+            Capturar!
+          </CaptureButton>
+        ) : (
+          <RemoveButton>Excluir</RemoveButton>
+        )}
       </BottomInfo>
     </PokemonCardContainer>
   );
