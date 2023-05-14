@@ -5,6 +5,7 @@ import { BASE_URL } from "../constants/url";
 const GlobalState = ({ children }) => {
   const [pokeList, setPokeList] = useState([]);
   const [activePokemon, setActivePokemon] = useState({});
+  const [pokedexList, setPokedexList] = useState([]);
 
   useEffect(() => {
     getAllPokemons();
@@ -37,11 +38,20 @@ const GlobalState = ({ children }) => {
     return pokemonMoves;
   };
 
+  const addPokemonToPokedex = (pokemon) => {
+    if (pokemon) {
+      setPokedexList([...pokedexList, pokemon]);
+    }
+    console.log(pokedexList);
+  };
+
   const data = {
     pokeList,
     activePokemon,
     setActivePokemon,
     getPokemonMoves,
+    addPokemonToPokedex,
+    pokedexList,
   };
   return (
     <GlobalContext.Provider value={data}>{children}</GlobalContext.Provider>

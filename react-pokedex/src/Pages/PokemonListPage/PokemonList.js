@@ -14,7 +14,7 @@ const PokemonList = () => {
       <ListContainer>
         <TituloPokemonList>Todos Pokémons</TituloPokemonList>
         {pokeList.map((pokemon, index) => (
-          <PokemonCard key={index} pokemon={pokemon} />
+          <PokemonCard key={index} pokemon={pokemon} page={"pokelist"} />
         ))}
       </ListContainer>
     </>
