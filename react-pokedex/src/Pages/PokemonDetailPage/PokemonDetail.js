@@ -26,8 +26,6 @@ const PokemonDetail = () => {
   const context = useContext(GlobalContext);
   const { activePokemon, getPokemonMoves } = context;
 
-  console.log(activePokemon)
-
   return (
     <>
       <Header pagina={"details"} />

@@ -51,6 +51,7 @@ const GlobalState = ({ children }) => {
     setActivePokemon,
     getPokemonMoves,
     addPokemonToPokedex,
+    pokedexList,
   };
   return (
     <GlobalContext.Provider value={data}>{children}</GlobalContext.Provider>

@@ -18,7 +18,7 @@ import { GlobalContext } from "../../contexts/GlobalContext";
 const PokemonCard = ({ pokemon }) => {
   const navigate = useNavigate();
   const context = useContext(GlobalContext);
-  const { setActivePokemon , addPokemonToPokedex } = context;
+  const { setActivePokemon, addPokemonToPokedex } = context;
 
   return (
     <PokemonCardContainer>
@@ -47,7 +47,13 @@ const PokemonCard = ({ pokemon }) => {
         >
           Detalhes
         </DetailsLink>
-        <CaptureButton onClick={() => {addPokemonToPokedex(pokemon)}}>Capturar!</CaptureButton>
+        <CaptureButton
+          onClick={() => {
+            addPokemonToPokedex(pokemon);
+          }}
+        >
+          Capturar!
+        </CaptureButton>
       </BottomInfo>
     </PokemonCardContainer>
   );
