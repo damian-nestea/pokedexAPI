@@ -45,6 +45,7 @@ export const CaptureButton = styled.a`
   background-color: #fff;
   border-radius: 0.5rem;
   padding: 0.5rem 2rem;
+  cursor: pointer;
 `;
 export const MainInfo = styled.div`
   display: flex;
