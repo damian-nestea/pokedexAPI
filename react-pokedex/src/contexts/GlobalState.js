@@ -11,6 +11,8 @@ const GlobalState = ({ children }) => {
     getAllPokemons();
   }, []);
 
+  useEffect(() => {}, [pokeList, pokedexList]);
+
   const getAllPokemons = async () => {
     try {
       const response = await fetch(`${BASE_URL}`);
@@ -39,10 +41,24 @@ const GlobalState = ({ children }) => {
   };
 
   const addPokemonToPokedex = (pokemon) => {
+    deletePokemonFromList(pokemon, pokeList, setPokeList);
     if (pokemon) {
       setPokedexList([...pokedexList, pokemon]);
     }
-    console.log(pokedexList);
+  };
+
+  const removePokemonFromPokedex = (pokemon) => {
+    deletePokemonFromList(pokemon, pokedexList, setPokedexList);
+    const auxArray = [...pokeList];
+    auxArray.push(pokemon);
+    auxArray.sort((a, b) => a.id - b.id);
+    setPokeList(auxArray);
+  };
+
+  const deletePokemonFromList = (pokemon, pokemonArray, setPokemonArray) => {
+    const auxArray = [...pokemonArray];
+    auxArray.splice(pokemonArray.indexOf(pokemon), 1);
+    setPokemonArray(auxArray);
   };
 
   const data = {
@@ -52,6 +68,7 @@ const GlobalState = ({ children }) => {
     getPokemonMoves,
     addPokemonToPokedex,
     pokedexList,
+    removePokemonFromPokedex,
   };
   return (
     <GlobalContext.Provider value={data}>{children}</GlobalContext.Provider>
