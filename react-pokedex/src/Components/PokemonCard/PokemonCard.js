@@ -19,7 +19,8 @@ import { GlobalContext } from "../../contexts/GlobalContext";
 const PokemonCard = ({ pokemon, page }) => {
   const navigate = useNavigate();
   const context = useContext(GlobalContext);
-  const { setActivePokemon, addPokemonToPokedex } = context;
+  const { setActivePokemon, addPokemonToPokedex, removePokemonFromPokedex } =
+    context;
 
   return (
     <PokemonCardContainer>
@@ -57,7 +58,9 @@ const PokemonCard = ({ pokemon, page }) => {
             Capturar!
           </CaptureButton>
         ) : (
-          <RemoveButton>Excluir</RemoveButton>
+          <RemoveButton onClick={() => removePokemonFromPokedex(pokemon)}>
+            Excluir
+          </RemoveButton>
         )}
       </BottomInfo>
     </PokemonCardContainer>
