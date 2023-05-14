@@ -12,6 +12,8 @@ import {
   StatsLine,
   LabelStats,
   PointStats,
+  StatsBarContainer,
+  StatsBar,
   BasicInfoAndMovesContainer,
   BasicInfo,
   NomePokemon,
@@ -46,26 +48,56 @@ const PokemonDetail = () => {
               <StatsLine>
                 <LabelStats>HP:</LabelStats>
                 <PointStats>{activePokemon.stats[0].base_stat}</PointStats>
+                <StatsBarContainer>
+                  <StatsBar
+                    style={{ width: `${activePokemon.stats[0].base_stat}%` }}
+                  />
+                </StatsBarContainer>
               </StatsLine>
               <StatsLine>
                 <LabelStats>Attack:</LabelStats>
-                <PointStats>{activePokemon.stats[0].base_stat}</PointStats>
+                <PointStats>{activePokemon.stats[1].base_stat}</PointStats>
+                <StatsBarContainer>
+                  <StatsBar
+                    style={{ width: `${activePokemon.stats[1].base_stat}%` }}
+                  />
+                </StatsBarContainer>
               </StatsLine>
               <StatsLine>
                 <LabelStats>Defense:</LabelStats>
                 <PointStats>{activePokemon.stats[2].base_stat}</PointStats>
+                <StatsBarContainer>
+                  <StatsBar
+                    style={{ width: `${activePokemon.stats[2].base_stat}%` }}
+                  />
+                </StatsBarContainer>
               </StatsLine>
               <StatsLine>
                 <LabelStats>Sp. Atk:</LabelStats>
                 <PointStats>{activePokemon.stats[3].base_stat}</PointStats>
+                <StatsBarContainer>
+                  <StatsBar
+                    style={{ width: `${activePokemon.stats[3].base_stat}%` }}
+                  />
+                </StatsBarContainer>
               </StatsLine>
               <StatsLine>
                 <LabelStats>Sp. Def:</LabelStats>
-                <PointStats>{activePokemon.stats[0].base_stat}</PointStats>
+                <PointStats>{activePokemon.stats[4].base_stat}</PointStats>
+                <StatsBarContainer>
+                  <StatsBar
+                    style={{ width: `${activePokemon.stats[4].base_stat}%` }}
+                  />
+                </StatsBarContainer>
               </StatsLine>
               <StatsLine>
                 <LabelStats>Speed:</LabelStats>
-                <PointStats>{activePokemon.stats[0].base_stat}</PointStats>
+                <PointStats>{activePokemon.stats[5].base_stat}</PointStats>
+                <StatsBarContainer>
+                  <StatsBar
+                    style={{ width: `${activePokemon.stats[5].base_stat}%` }}
+                  />
+                </StatsBarContainer>
               </StatsLine>
               <StatsLine>
                 <LabelStats>Total</LabelStats>

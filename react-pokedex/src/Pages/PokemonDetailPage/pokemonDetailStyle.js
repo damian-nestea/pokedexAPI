@@ -56,6 +56,7 @@ export const StatsContainer = styled.div`
 `;
 export const StatsLine = styled.div`
   display: flex;
+  align-items: center;
   border-bottom: 0.15rem solid #f2f2f2;
 `;
 export const LabelStats = styled.p`
@@ -68,6 +69,16 @@ export const PointStats = styled.div`
   span {
     font-weight: bold;
   }
+`;
+export const StatsBarContainer = styled.div`
+  flex-grow: 1;
+  height: 100%;
+  margin-left: 1rem;
+`;
+export const StatsBar = styled.div`
+  height: 100%;
+  border-radius: 0.5rem;
+  background-color: red;
 `;
 export const BasicInfoAndMovesContainer = styled.section`
   margin-left: 3rem;
