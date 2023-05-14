@@ -11,6 +11,8 @@ const GlobalState = ({ children }) => {
     getAllPokemons();
   }, []);
 
+  useEffect(() => {}, [pokeList]);
+
   const getAllPokemons = async () => {
     try {
       const response = await fetch(`${BASE_URL}`);
@@ -39,10 +41,16 @@ const GlobalState = ({ children }) => {
   };
 
   const addPokemonToPokedex = (pokemon) => {
+    deletePokemonFromList(pokemon);
     if (pokemon) {
       setPokedexList([...pokedexList, pokemon]);
     }
-    console.log(pokedexList);
+  };
+
+  const deletePokemonFromList = (pokemon) => {
+    const auxArray = [...pokeList];
+    auxArray.splice(pokeList.indexOf(pokemon), 1);
+    setPokeList(auxArray);
   };
 
   const data = {
