@@ -51,6 +51,7 @@ const PokemonDetail = () => {
                 <StatsBarContainer>
                   <StatsBar
                     style={{ width: `${activePokemon.stats[0].base_stat}%` }}
+                    stats={activePokemon.stats[0].base_stat}
                   />
                 </StatsBarContainer>
               </StatsLine>
@@ -60,6 +61,7 @@ const PokemonDetail = () => {
                 <StatsBarContainer>
                   <StatsBar
                     style={{ width: `${activePokemon.stats[1].base_stat}%` }}
+                    stats={activePokemon.stats[1].base_stat}
                   />
                 </StatsBarContainer>
               </StatsLine>
@@ -69,6 +71,7 @@ const PokemonDetail = () => {
                 <StatsBarContainer>
                   <StatsBar
                     style={{ width: `${activePokemon.stats[2].base_stat}%` }}
+                    stats={activePokemon.stats[2].base_stat}
                   />
                 </StatsBarContainer>
               </StatsLine>
@@ -78,6 +81,7 @@ const PokemonDetail = () => {
                 <StatsBarContainer>
                   <StatsBar
                     style={{ width: `${activePokemon.stats[3].base_stat}%` }}
+                    stats={activePokemon.stats[3].base_stat}
                   />
                 </StatsBarContainer>
               </StatsLine>
@@ -87,6 +91,7 @@ const PokemonDetail = () => {
                 <StatsBarContainer>
                   <StatsBar
                     style={{ width: `${activePokemon.stats[4].base_stat}%` }}
+                    stats={activePokemon.stats[4].base_stat}
                   />
                 </StatsBarContainer>
               </StatsLine>
@@ -96,6 +101,7 @@ const PokemonDetail = () => {
                 <StatsBarContainer>
                   <StatsBar
                     style={{ width: `${activePokemon.stats[5].base_stat}%` }}
+                    stats={activePokemon.stats[5].base_stat}
                   />
                 </StatsBarContainer>
               </StatsLine>

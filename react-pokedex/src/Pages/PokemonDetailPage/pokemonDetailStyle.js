@@ -77,8 +77,10 @@ export const StatsBarContainer = styled.div`
 `;
 export const StatsBar = styled.div`
   height: 100%;
+  max-width: 105%;
   border-radius: 0.5rem;
-  background-color: red;
+  background-color: #ff7c2d;
+  ${({ stats }) => stats < 50 && "background-color:#FFDE6A; "}
 `;
 export const BasicInfoAndMovesContainer = styled.section`
   margin-left: 3rem;

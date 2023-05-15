@@ -1,16 +1,21 @@
-import React from "react";
+import React, { useContext } from "react";
 import {
   HeaderContainer,
   PokemonLogo,
   HomeButton,
   PokedexButton,
+  RemoveFromPokedex,
 } from "./headerStyle";
 import Logo from "../assets/pokemonLogo.png";
 import { GoToPokedexPage, GoToPokemonListPage } from "../../Router/coordinator";
 import { useNavigate } from "react-router-dom";
+import { GlobalContext } from "../../contexts/GlobalContext";
 
 const Header = ({ pagina }) => {
   const navigate = useNavigate();
+  const context = useContext(GlobalContext);
+  const { isPokemonInPokedex, removePokemonFromPokedex, activePokemon } =
+    context;
 
   const AllPokemonsButton =
     pagina === "pokedex" || pagina === "details" ? (
@@ -34,11 +39,23 @@ const Header = ({ pagina }) => {
       </PokedexButton>
     ) : null;
 
+  const RemovePokemonFromPokedexButton =
+    pagina === "details" && isPokemonInPokedex() ? (
+      <RemoveFromPokedex
+        onClick={() => {
+          removePokemonFromPokedex(activePokemon);
+        }}
+      >
+        Excluir da Pokedex
+      </RemoveFromPokedex>
+    ) : null;
+
   return (
     <HeaderContainer>
       {AllPokemonsButton}
       <PokemonLogo src={Logo} />
       {GoToPokedexButton}
+      {RemovePokemonFromPokedexButton}
     </HeaderContainer>
   );
 };
