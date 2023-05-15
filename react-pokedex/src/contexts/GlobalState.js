@@ -61,6 +61,10 @@ const GlobalState = ({ children }) => {
     setPokemonArray(auxArray);
   };
 
+  const isPokemonInPokedex = () => {
+    return pokedexList.includes(activePokemon);
+  };
+
   const data = {
     pokeList,
     activePokemon,
@@ -69,6 +73,7 @@ const GlobalState = ({ children }) => {
     addPokemonToPokedex,
     pokedexList,
     removePokemonFromPokedex,
+    isPokemonInPokedex,
   };
   return (
     <GlobalContext.Provider value={data}>{children}</GlobalContext.Provider>
