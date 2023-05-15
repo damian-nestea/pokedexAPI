@@ -5,6 +5,7 @@ export const ListContainer = styled.section`
   min-height: 80vh;
   display: flex;
   flex-wrap: wrap;
+  align-items: flex-start;
   justify-content: space-evenly;
   gap: 1.8rem;
   padding: 2rem;

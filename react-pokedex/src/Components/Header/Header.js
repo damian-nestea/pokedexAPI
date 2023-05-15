@@ -4,6 +4,7 @@ import {
   PokemonLogo,
   HomeButton,
   PokedexButton,
+  RemoveFromPokedex,
 } from "./headerStyle";
 import Logo from "../assets/pokemonLogo.png";
 import { GoToPokedexPage, GoToPokemonListPage } from "../../Router/coordinator";
@@ -34,11 +35,23 @@ const Header = ({ pagina }) => {
       </PokedexButton>
     ) : null;
 
+  const RemovePokemonFromPokedexButton =
+    pagina === "details" ? (
+      <RemoveFromPokedex
+        onClick={() => {
+          GoToPokemonListPage(navigate);
+        }}
+      >
+        Excluir da Pokedex
+      </RemoveFromPokedex>
+    ) : null;
+
   return (
     <HeaderContainer>
       {AllPokemonsButton}
       <PokemonLogo src={Logo} />
       {GoToPokedexButton}
+      {RemovePokemonFromPokedexButton}
     </HeaderContainer>
   );
 };
