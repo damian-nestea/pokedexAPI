@@ -15,6 +15,7 @@ import {
 import { useNavigate } from "react-router-dom";
 import { GoToDetailsPage } from "../../Router/coordinator";
 import { GlobalContext } from "../../contexts/GlobalContext";
+import pokeballBackground from "../assets/smallPokeballBG.png";
 
 const PokemonCard = ({ pokemon, page }) => {
   const navigate = useNavigate();
@@ -29,7 +30,14 @@ const PokemonCard = ({ pokemon, page }) => {
   let color = setPokemonTypeColors(pokemon.types[0].type.name).color;
 
   return (
-    <PokemonCardContainer style={{ backgroundColor: `${color}9f` }}>
+    <PokemonCardContainer
+      style={{
+        backgroundColor: `${color}99`,
+        backgroundImage: `url(${pokeballBackground})`,
+        backgroundPosition: "right",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
       <TopInfo>
         <MainInfo>
           <IdPokemon>
