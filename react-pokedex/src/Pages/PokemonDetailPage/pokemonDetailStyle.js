@@ -96,6 +96,7 @@ export const BasicInfo = styled.div`
   p {
     color: #fff;
     font-weight: bold;
+    letter-spacing: 0.1rem;
   }
 `;
 export const NomePokemon = styled.h2`

@@ -20,6 +20,7 @@ export const Name = styled.h2`
 export const IdPokemon = styled.p`
   color: #fff;
   font-weight: bold;
+  letter-spacing: 0.1rem;
 `;
 export const Types = styled.div`
   display: flex;
