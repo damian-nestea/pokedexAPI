@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { GlobalContext } from "./GlobalContext";
 import { BASE_URL } from "../constants/url";
+import { PokemonTypes } from "../utils/PokemonTypes";
 
 const GlobalState = ({ children }) => {
   const [pokeList, setPokeList] = useState([]);
@@ -65,6 +66,11 @@ const GlobalState = ({ children }) => {
     return pokedexList.includes(activePokemon);
   };
 
+  const setPokemonTypeColors = (pokemonType) => {
+    const type = PokemonTypes.find((item) => item.type === pokemonType);
+    return type;
+  };
+
   const data = {
     pokeList,
     activePokemon,
@@ -74,6 +80,7 @@ const GlobalState = ({ children }) => {
     pokedexList,
     removePokemonFromPokedex,
     isPokemonInPokedex,
+    setPokemonTypeColors
   };
   return (
     <GlobalContext.Provider value={data}>{children}</GlobalContext.Provider>

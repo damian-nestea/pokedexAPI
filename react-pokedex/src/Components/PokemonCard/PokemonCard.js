@@ -19,11 +19,17 @@ import { GlobalContext } from "../../contexts/GlobalContext";
 const PokemonCard = ({ pokemon, page }) => {
   const navigate = useNavigate();
   const context = useContext(GlobalContext);
-  const { setActivePokemon, addPokemonToPokedex, removePokemonFromPokedex } =
-    context;
+  const {
+    setActivePokemon,
+    addPokemonToPokedex,
+    removePokemonFromPokedex,
+    setPokemonTypeColors,
+  } = context;
+
+  let color = setPokemonTypeColors(pokemon.types[0].type.name).color;
 
   return (
-    <PokemonCardContainer>
+    <PokemonCardContainer style={{ backgroundColor: `${color}99` }}>
       <TopInfo>
         <MainInfo>
           <IdPokemon>
