@@ -29,7 +29,7 @@ const PokemonCard = ({ pokemon, page }) => {
   let color = setPokemonTypeColors(pokemon.types[0].type.name).color;
 
   return (
-    <PokemonCardContainer style={{ backgroundColor: `${color}99` }}>
+    <PokemonCardContainer style={{ backgroundColor: `${color}9f` }}>
       <TopInfo>
         <MainInfo>
           <IdPokemon>
