@@ -23,17 +23,27 @@ import {
 } from "./pokemonDetailStyle";
 import Header from "../../Components/Header/Header";
 import { GlobalContext } from "../../contexts/GlobalContext";
+import pokeballBackground from "../../Components/assets/bigPokeballBG.png";
 
 const PokemonDetail = () => {
   const context = useContext(GlobalContext);
-  const { activePokemon, getPokemonMoves } = context;
+  const { activePokemon, getPokemonMoves, setPokemonTypeColors } = context;
+
+  let color = setPokemonTypeColors(activePokemon.types[0].type.name).color;
 
   return (
     <>
       <Header pagina={"details"} />
       <DetailsBackground>
         <TituloDetails>Detalhes</TituloDetails>
-        <DetailsContainer>
+        <DetailsContainer
+          style={{
+            backgroundColor: `${color}99`,
+            backgroundImage: `url(${pokeballBackground})`,
+            backgroundPosition: "right",
+            backgroundRepeat: "no-repeat",
+          }}
+        >
           <PokemonBackAndFrontContainer>
             <PokemonBackFrontPhoto>
               <PokemonImage src={activePokemon.sprites.front_default} />
