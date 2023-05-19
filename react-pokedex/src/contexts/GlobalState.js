@@ -80,7 +80,7 @@ const GlobalState = ({ children }) => {
     pokedexList,
     removePokemonFromPokedex,
     isPokemonInPokedex,
-    setPokemonTypeColors
+    setPokemonTypeColors,
   };
   return (
     <GlobalContext.Provider value={data}>{children}</GlobalContext.Provider>

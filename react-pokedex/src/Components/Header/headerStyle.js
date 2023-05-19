@@ -38,6 +38,12 @@ export const PokedexButton = styled.button`
   position: absolute;
   right: 5%;
   transform: translate(-5%, 0);
+  transition: 0.8s;
+  :hover {
+    background-color: #fff;
+    color: #33a4f5;
+    border: 1px solid #33a4f5;
+  }
 `;
 export const RemoveFromPokedex = styled.button`
   background-color: #ff6262;
@@ -47,4 +53,10 @@ export const RemoveFromPokedex = styled.button`
   border-radius: 0.25rem;
   border: none;
   cursor: pointer;
+  transition: 0.8s;
+  :hover {
+    background-color: #fff;
+    color: #ff6262;
+    border: 1px solid #ff6262;
+  }
 `;

@@ -24,6 +24,7 @@ import {
 import Header from "../../Components/Header/Header";
 import { GlobalContext } from "../../contexts/GlobalContext";
 import pokeballBackground from "../../Components/assets/bigPokeballBG.png";
+import PokemonTypes from "../../Components/PokemonTypes/PokemonTypes";
 
 const PokemonDetail = () => {
   const context = useContext(GlobalContext);
@@ -137,9 +138,7 @@ const PokemonDetail = () => {
                   : `0${activePokemon.id}`}
               </p>
               <NomePokemon>{activePokemon.name}</NomePokemon>
-              {activePokemon.types.map((type, index) => (
-                <p key={index}>{type.type.name}</p>
-              ))}
+              <PokemonTypes types={activePokemon.types} page={"detailsPage"} />
             </BasicInfo>
             <MovesContainer>
               <StatsContainerTitle>Moves:</StatsContainerTitle>

@@ -6,21 +6,26 @@ export const PokemonCardContainer = styled.article`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 20rem;
-  height: 10rem;
+  width: 21rem;
+  height: 11rem;
   padding: 1.2rem;
   border-radius: 1rem;
+  transition: 0.8s;
+  :hover {
+    border: 1px solid #aaa;
+  }
 `;
 export const Name = styled.h2`
+  font-family: "Inter";
+  font-size: 1.3rem;
   color: #fff;
   ::first-letter {
     text-transform: uppercase;
   }
 `;
 export const IdPokemon = styled.p`
+  font-family: "Inter";
   color: #fff;
-  font-weight: bold;
-  letter-spacing: 0.1rem;
 `;
 export const Types = styled.div`
   display: flex;
@@ -33,6 +38,8 @@ export const Image = styled.img`
   right: 1rem;
 `;
 export const DetailsLink = styled.a`
+  font-family: "Poppins";
+  font-weight: 700;
   font-size: 0.8rem;
   color: #fff;
   text-decoration: underline;
@@ -42,19 +49,29 @@ export const DetailsLink = styled.a`
   cursor: pointer;
 `;
 export const CaptureButton = styled.a`
-  font-size: 0.9rem;
+  font-family: "Poppins";
+  font-size: 0.8rem;
   background-color: #fff;
   border-radius: 0.5rem;
   padding: 0.5rem 2rem;
   cursor: pointer;
+  transition: 0.8s;
+  :hover {
+    opacity: 0.3;
+  }
 `;
 export const RemoveButton = styled.a`
-  font-size: 0.9rem;
+  font-family: "Poppins";
+  font-size: 0.8rem;
   background-color: #ff6262;
   color: #fff;
   border-radius: 0.5rem;
   padding: 0.5rem 2rem;
   cursor: pointer;
+  transition: 0.8s;
+  :hover {
+    opacity: 0.3;
+  }
 `;
 export const MainInfo = styled.div`
   display: flex;

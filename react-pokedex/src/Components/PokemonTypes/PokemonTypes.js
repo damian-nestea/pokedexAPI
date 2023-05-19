@@ -8,10 +8,8 @@ import FlyingType from "../assets/flying.png";
 import GrassType from "../assets/grass.png";
 import WaterType from "../assets/normal.png";
 
-const PokemonTypes = ({ types }) => {
-  console.log(types);
-  const Type = types.map((type, index) => {
-    console.log(type.type.name);
+const PokemonTypes = ({ types, page }) => {
+  const Type = types.map((type) => {
     switch (type.type.name) {
       case "normal":
         return <TypeImage src={NormalType} alt="Pokemon normal" />;
@@ -32,7 +30,7 @@ const PokemonTypes = ({ types }) => {
     }
   });
 
-  return <TypeContainer>{Type}</TypeContainer>;
+  return <TypeContainer page={page}>{Type}</TypeContainer>;
 };
 
 export default PokemonTypes;

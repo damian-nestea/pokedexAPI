@@ -45,12 +45,7 @@ const PokemonCard = ({ pokemon, page }) => {
             #{pokemon.id <= 9 ? `0${pokemon.id}` : pokemon.id}
           </IdPokemon>
           <Name>{pokemon.name}</Name>
-          <PokemonTypes types={pokemon.types} />
-          {/* <Types>
-            {pokemon.types.map((item, index) => (
-              <p key={index}>{item.type.name}</p>
-            ))}
-          </Types> */}
+          <PokemonTypes types={pokemon.types} page={"pokemonCard"} />
         </MainInfo>
         <Image
           src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png`}
