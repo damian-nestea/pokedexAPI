@@ -16,6 +16,7 @@ import { useNavigate } from "react-router-dom";
 import { GoToDetailsPage } from "../../Router/coordinator";
 import { GlobalContext } from "../../contexts/GlobalContext";
 import pokeballBackground from "../assets/smallPokeballBG.png";
+import PokemonTypes from "../PokemonTypes/PokemonTypes";
 
 const PokemonCard = ({ pokemon, page }) => {
   const navigate = useNavigate();
@@ -44,11 +45,12 @@ const PokemonCard = ({ pokemon, page }) => {
             #{pokemon.id <= 9 ? `0${pokemon.id}` : pokemon.id}
           </IdPokemon>
           <Name>{pokemon.name}</Name>
-          <Types>
+          <PokemonTypes types={pokemon.types} />
+          {/* <Types>
             {pokemon.types.map((item, index) => (
               <p key={index}>{item.type.name}</p>
             ))}
-          </Types>
+          </Types> */}
         </MainInfo>
         <Image
           src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png`}
