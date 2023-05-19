@@ -8,4 +8,8 @@ export const TypeContainer = styled.div`
 export const TypeImage = styled.img`
   height: 100%;
   margin-right: 0.2rem;
+  transition: 0.8s;
+  :hover {
+    opacity: 0.3;
+  }
 `;

@@ -10,6 +10,10 @@ export const PokemonCardContainer = styled.article`
   height: 10rem;
   padding: 1.2rem;
   border-radius: 1rem;
+  transition: 0.8s;
+  :hover {
+    border: 1px solid #aaa;
+  }
 `;
 export const Name = styled.h2`
   color: #fff;
@@ -47,6 +51,10 @@ export const CaptureButton = styled.a`
   border-radius: 0.5rem;
   padding: 0.5rem 2rem;
   cursor: pointer;
+  transition: 0.8s;
+  :hover {
+    opacity: 0.3;
+  }
 `;
 export const RemoveButton = styled.a`
   font-size: 0.9rem;
@@ -55,6 +63,10 @@ export const RemoveButton = styled.a`
   border-radius: 0.5rem;
   padding: 0.5rem 2rem;
   cursor: pointer;
+  transition: 0.8s;
+  :hover {
+    opacity: 0.3;
+  }
 `;
 export const MainInfo = styled.div`
   display: flex;
