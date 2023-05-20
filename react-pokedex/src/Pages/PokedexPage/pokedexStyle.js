@@ -11,6 +11,7 @@ export const ListContainer = styled.section`
   padding: 2rem;
 `;
 export const TituloPokedex = styled.h1`
+  font-family: "Poppins";
   font-size: 2rem;
   text-align: left;
   color: #fff;
