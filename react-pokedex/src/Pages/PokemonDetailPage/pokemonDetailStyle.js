@@ -5,6 +5,7 @@ export const DetailsBackground = styled.div`
   padding: 2rem;
 `;
 export const TituloDetails = styled.h1`
+  font-family: "Poppins";
   font-size: 2rem;
   text-align: left;
   color: #fff;
@@ -46,6 +47,7 @@ export const StatsBoxContainer = styled.section`
   border-radius: 0.5rem;
 `;
 export const StatsContainerTitle = styled.h2`
+  font-family: "Inter";
   align-self: flex-start;
   margin-bottom: 1.8rem;
 `;
@@ -55,6 +57,7 @@ export const StatsContainer = styled.div`
   gap: 1rem;
 `;
 export const StatsLine = styled.div`
+  font-family: "Poppins";
   display: flex;
   align-items: center;
   border-bottom: 0.15rem solid #f2f2f2;
@@ -94,12 +97,14 @@ export const BasicInfo = styled.div`
   align-items: baseline;
   gap: 0.3rem;
   p {
+    font-family: "Inter";
     color: #fff;
     font-weight: bold;
     letter-spacing: 0.1rem;
   }
 `;
 export const NomePokemon = styled.h2`
+  font-family: "Inter";
   color: #fff;
   font-size: 2.5rem;
   font-weight: bold;
@@ -119,6 +124,7 @@ export const MovesContainer = styled.div`
 `;
 export const MoveItem = styled.p`
   background-color: #ececec;
+  font-family: "Montserrat";
   font-size: 0.8rem;
   padding: 0.8rem 1rem;
   border-radius: 0.5rem;
