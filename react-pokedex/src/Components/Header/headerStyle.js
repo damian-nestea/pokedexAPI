@@ -18,6 +18,7 @@ export const PokemonLogo = styled.img`
 
 export const HomeButton = styled.button`
   background-color: #fff;
+  font-family: "Poppins";
   padding: 0;
   font-size: 1.1rem;
   font-weight: bold;
@@ -29,6 +30,7 @@ export const HomeButton = styled.button`
 export const PokedexButton = styled.button`
   background-color: #33a4f5;
   color: #fff;
+  font-family: "Poppins";
   padding: 1rem 2.5rem;
   font-size: 1.1rem;
   font-weight: bold;
@@ -49,6 +51,7 @@ export const RemoveFromPokedex = styled.button`
   background-color: #ff6262;
   color: #fff;
   padding: 1rem 2.5rem;
+  font-family: "Poppins";
   font-size: 1rem;
   border-radius: 0.25rem;
   border: none;
