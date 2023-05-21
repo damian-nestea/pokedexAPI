@@ -5,6 +5,7 @@ import {
   HomeButton,
   PokedexButton,
   RemoveFromPokedex,
+  AddToPokedex,
 } from "./headerStyle";
 import Logo from "../assets/pokemonLogo.png";
 import { GoToPokedexPage, GoToPokemonListPage } from "../../Router/coordinator";
@@ -14,8 +15,12 @@ import { GlobalContext } from "../../contexts/GlobalContext";
 const Header = ({ pagina }) => {
   const navigate = useNavigate();
   const context = useContext(GlobalContext);
-  const { isPokemonInPokedex, removePokemonFromPokedex, activePokemon } =
-    context;
+  const {
+    isPokemonInPokedex,
+    removePokemonFromPokedex,
+    addPokemonToPokedex,
+    activePokemon,
+  } = context;
 
   const AllPokemonsButton =
     pagina === "pokedex" || pagina === "details" ? (
@@ -39,7 +44,7 @@ const Header = ({ pagina }) => {
       </PokedexButton>
     ) : null;
 
-  const RemovePokemonFromPokedexButton =
+  const RemoveOrAddPokemonToPokedexButton =
     pagina === "details" && isPokemonInPokedex() ? (
       <RemoveFromPokedex
         onClick={() => {
@@ -48,6 +53,14 @@ const Header = ({ pagina }) => {
       >
         Excluir da Pokedex
       </RemoveFromPokedex>
+    ) : pagina === "details" && !isPokemonInPokedex() ? (
+      <AddToPokedex
+        onClick={() => {
+          addPokemonToPokedex(activePokemon);
+        }}
+      >
+        Capturar Pokemon!
+      </AddToPokedex>
     ) : null;
 
   return (
@@ -55,7 +68,7 @@ const Header = ({ pagina }) => {
       {AllPokemonsButton}
       <PokemonLogo src={Logo} />
       {GoToPokedexButton}
-      {RemovePokemonFromPokedexButton}
+      {RemoveOrAddPokemonToPokedexButton}
     </HeaderContainer>
   );
 };
