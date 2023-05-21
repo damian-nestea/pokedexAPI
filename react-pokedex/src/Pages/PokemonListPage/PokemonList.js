@@ -3,6 +3,7 @@ import { ListContainer, TituloPokemonList } from "./pokemonListStyle";
 import PokemonCard from "../../Components/PokemonCard/PokemonCard";
 import Header from "../../Components/Header/Header";
 import { GlobalContext } from "../../contexts/GlobalContext";
+import Modal from "../../Components/Modal/Modal";
 
 const PokemonList = () => {
   const context = useContext(GlobalContext);
@@ -17,6 +18,7 @@ const PokemonList = () => {
           <PokemonCard key={index} pokemon={pokemon} page={"pokelist"} />
         ))}
       </ListContainer>
+      {/* <Modal /> */}
     </>
   );
 };

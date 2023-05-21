@@ -16,6 +16,7 @@ import { GoToDetailsPage } from "../../Router/coordinator";
 import { GlobalContext } from "../../contexts/GlobalContext";
 import pokeballBackground from "../assets/smallPokeballBG.png";
 import PokemonTypes from "../PokemonTypes/PokemonTypes";
+import Modal from "../Modal/Modal";
 
 const PokemonCard = ({ pokemon, page }) => {
   const navigate = useNavigate();
@@ -64,6 +65,7 @@ const PokemonCard = ({ pokemon, page }) => {
           <CaptureButton
             onClick={() => {
               addPokemonToPokedex(pokemon);
+              <Modal />;
             }}
           >
             Capturar!
