@@ -17,7 +17,7 @@ const PokedexPage = () => {
           <PokemonCard key={index} pokemon={pokemon} />
         ))}
       </ListContainer>
-      {/* <Modal /> */}
+      <Modal />
     </>
   );
 };

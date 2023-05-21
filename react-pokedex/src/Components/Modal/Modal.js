@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useRef } from "react";
 import {
   HeadingText,
   ModalBackground,
@@ -9,10 +9,23 @@ import { GlobalContext } from "../../contexts/GlobalContext";
 
 const Modal = () => {
   const context = useContext(GlobalContext);
-  const { openModal } = context;
+  const { openModal, setOpenModal } = context;
+  let modalRef = useRef();
+
+  useEffect(() => {
+    let handler = (e) => {
+      if (modalRef != undefined) {
+        modalRef.current.contains(e.target) && setOpenModal(false);
+      }
+    };
+    openModal && document.addEventListener("mousedown", handler);
+    return () => {
+      document.removeEventListener("mousedown", handler);
+    };
+  });
   if (openModal) {
     return (
-      <ModalBackground>
+      <ModalBackground ref={modalRef}>
         <ModalContainer>
           <HeadingText>Gotcha!</HeadingText>
           <SmallText>O Pokémon foi adicionado a sua Pokédex</SmallText>

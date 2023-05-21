@@ -72,7 +72,7 @@ const Header = ({ pagina }) => {
       <PokemonLogo src={Logo} />
       {GoToPokedexButton}
       {RemoveOrAddPokemonToPokedexButton}
-      {/* <Modal /> */}
+      <Modal />
     </HeaderContainer>
   );
 };
