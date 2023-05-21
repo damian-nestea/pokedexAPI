@@ -7,7 +7,6 @@ import {
   Image,
   Name,
   IdPokemon,
-  Types,
   MainInfo,
   TopInfo,
   BottomInfo,
@@ -56,6 +55,7 @@ const PokemonCard = ({ pokemon, page }) => {
           onClick={() => {
             setActivePokemon(pokemon);
             GoToDetailsPage(navigate);
+            window.scroll({ top: 0, left: 0, behavior: "smooth" });
           }}
         >
           Detalhes
