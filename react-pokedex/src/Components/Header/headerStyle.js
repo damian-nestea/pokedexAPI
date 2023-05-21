@@ -63,3 +63,19 @@ export const RemoveFromPokedex = styled.button`
     border: 1px solid #ff6262;
   }
 `;
+export const AddToPokedex = styled.button`
+  background-color: #33a4f5;
+  color: #fff;
+  padding: 1rem 2.5rem;
+  font-family: "Poppins";
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  transition: 0.8s;
+  :hover {
+    background-color: #fff;
+    color: #33a4f5;
+    border: 1px solid #33a4f5;
+  }
+`;

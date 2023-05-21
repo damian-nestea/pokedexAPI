@@ -7,7 +7,6 @@ import {
   Image,
   Name,
   IdPokemon,
-  Types,
   MainInfo,
   TopInfo,
   BottomInfo,
@@ -17,6 +16,7 @@ import { GoToDetailsPage } from "../../Router/coordinator";
 import { GlobalContext } from "../../contexts/GlobalContext";
 import pokeballBackground from "../assets/smallPokeballBG.png";
 import PokemonTypes from "../PokemonTypes/PokemonTypes";
+import Modal from "../Modal/Modal";
 
 const PokemonCard = ({ pokemon, page }) => {
   const navigate = useNavigate();
@@ -26,6 +26,7 @@ const PokemonCard = ({ pokemon, page }) => {
     addPokemonToPokedex,
     removePokemonFromPokedex,
     setPokemonTypeColors,
+    setOpenModal,
   } = context;
 
   let color = setPokemonTypeColors(pokemon.types[0].type.name).color;
@@ -56,6 +57,7 @@ const PokemonCard = ({ pokemon, page }) => {
           onClick={() => {
             setActivePokemon(pokemon);
             GoToDetailsPage(navigate);
+            window.scroll({ top: 0, left: 0, behavior: "smooth" });
           }}
         >
           Detalhes
@@ -64,6 +66,7 @@ const PokemonCard = ({ pokemon, page }) => {
           <CaptureButton
             onClick={() => {
               addPokemonToPokedex(pokemon);
+              setOpenModal(true);
             }}
           >
             Capturar!
