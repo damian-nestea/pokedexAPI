@@ -129,8 +129,13 @@ export const MoveItem = styled.p`
   padding: 0.8rem 1rem;
   border-radius: 0.5rem;
   margin-bottom: 1rem;
+  transition: 0.8s;
   ::first-letter {
     text-transform: uppercase;
+  }
+  :hover {
+    background-color: #333;
+    color: #fff;
   }
 `;
 export const MainImagePokemon = styled.img`
