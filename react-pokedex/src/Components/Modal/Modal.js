@@ -14,8 +14,8 @@ const Modal = () => {
 
   useEffect(() => {
     let handler = (e) => {
-      if (modalRef != undefined) {
-        modalRef.current.contains(e.target) && setOpenModal(false);
+      if (modalRef) {
+        !modalRef.current.contains(e.target) && setOpenModal(false);
       }
     };
     openModal && document.addEventListener("mousedown", handler);
@@ -25,8 +25,8 @@ const Modal = () => {
   });
   if (openModal) {
     return (
-      <ModalBackground ref={modalRef}>
-        <ModalContainer>
+      <ModalBackground>
+        <ModalContainer ref={modalRef}>
           <HeadingText>Gotcha!</HeadingText>
           <SmallText>O Pokémon foi adicionado a sua Pokédex</SmallText>
         </ModalContainer>
