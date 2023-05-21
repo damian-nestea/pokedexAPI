@@ -25,7 +25,6 @@ import Header from "../../Components/Header/Header";
 import { GlobalContext } from "../../contexts/GlobalContext";
 import pokeballBackground from "../../Components/assets/bigPokeballBG.png";
 import PokemonTypes from "../../Components/PokemonTypes/PokemonTypes";
-import Modal from "../../Components/Modal/Modal";
 
 const PokemonDetail = () => {
   const context = useContext(GlobalContext);
@@ -153,7 +152,6 @@ const PokemonDetail = () => {
           />
         </DetailsContainer>
       </DetailsBackground>
-      {/* <Modal /> */}
     </>
   );
 };

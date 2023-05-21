@@ -18,7 +18,6 @@ const PokemonList = () => {
           <PokemonCard key={index} pokemon={pokemon} page={"pokelist"} />
         ))}
       </ListContainer>
-      <Modal />
     </>
   );
 };
