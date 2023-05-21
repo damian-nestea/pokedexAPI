@@ -1,11 +1,19 @@
 import React from "react";
-import { ModalBackground, ModalContainer } from "./modalStyle";
+import {
+  HeadingText,
+  ModalBackground,
+  ModalContainer,
+  SmallText,
+} from "./modalStyle";
 
 const Modal = ({ isOpen }) => {
   if (true) {
     return (
       <ModalBackground>
-        <ModalContainer>Modal</ModalContainer>
+        <ModalContainer>
+          <HeadingText>Gotcha!</HeadingText>
+          <SmallText>O Pokémon foi adicionado a sua Pokédex</SmallText>
+        </ModalContainer>
       </ModalBackground>
     );
   }

@@ -12,7 +12,27 @@ export const ModalBackground = styled.div`
 
 export const ModalContainer = styled.article`
   position: fixed;
-  top: 50%;
+  top: 15%;
   left: 50%;
   transform: translate(-50%, 50%);
+  width: 25rem;
+  height: 15rem;
+  background-color: #fff;
+  color: #000;
+  font-family: "Poppins";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+`;
+
+export const HeadingText = styled.p`
+  font-size: 3rem;
+  font-weight: 700;
+`;
+
+export const SmallText = styled.p`
+  font-size: 1rem;
+  font-weight: 700;
 `;
