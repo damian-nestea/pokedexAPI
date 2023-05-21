@@ -26,6 +26,7 @@ const PokemonCard = ({ pokemon, page }) => {
     addPokemonToPokedex,
     removePokemonFromPokedex,
     setPokemonTypeColors,
+    setOpenModal,
   } = context;
 
   let color = setPokemonTypeColors(pokemon.types[0].type.name).color;
@@ -65,7 +66,7 @@ const PokemonCard = ({ pokemon, page }) => {
           <CaptureButton
             onClick={() => {
               addPokemonToPokedex(pokemon);
-              <Modal />;
+              setOpenModal(true);
             }}
           >
             Capturar!

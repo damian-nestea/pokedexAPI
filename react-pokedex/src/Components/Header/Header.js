@@ -11,6 +11,7 @@ import Logo from "../assets/pokemonLogo.png";
 import { GoToPokedexPage, GoToPokemonListPage } from "../../Router/coordinator";
 import { useNavigate } from "react-router-dom";
 import { GlobalContext } from "../../contexts/GlobalContext";
+import Modal from "../Modal/Modal";
 
 const Header = ({ pagina }) => {
   const navigate = useNavigate();
@@ -20,6 +21,7 @@ const Header = ({ pagina }) => {
     removePokemonFromPokedex,
     addPokemonToPokedex,
     activePokemon,
+    setOpenModal,
   } = context;
 
   const AllPokemonsButton =
@@ -57,6 +59,7 @@ const Header = ({ pagina }) => {
       <AddToPokedex
         onClick={() => {
           addPokemonToPokedex(activePokemon);
+          setOpenModal(true);
         }}
       >
         Capturar Pokemon!
@@ -69,6 +72,7 @@ const Header = ({ pagina }) => {
       <PokemonLogo src={Logo} />
       {GoToPokedexButton}
       {RemoveOrAddPokemonToPokedexButton}
+      {/* <Modal /> */}
     </HeaderContainer>
   );
 };

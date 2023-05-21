@@ -1,13 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 import {
   HeadingText,
   ModalBackground,
   ModalContainer,
   SmallText,
 } from "./modalStyle";
+import { GlobalContext } from "../../contexts/GlobalContext";
 
-const Modal = ({ isOpen }) => {
-  if (true) {
+const Modal = () => {
+  const context = useContext(GlobalContext);
+  const { openModal } = context;
+  if (openModal) {
     return (
       <ModalBackground>
         <ModalContainer>

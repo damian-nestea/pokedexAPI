@@ -7,6 +7,7 @@ const GlobalState = ({ children }) => {
   const [pokeList, setPokeList] = useState([]);
   const [activePokemon, setActivePokemon] = useState({});
   const [pokedexList, setPokedexList] = useState([]);
+  const [openModal, setOpenModal] = useState(false);
 
   useEffect(() => {
     getAllPokemons();
@@ -45,6 +46,7 @@ const GlobalState = ({ children }) => {
     deletePokemonFromList(pokemon, pokeList, setPokeList);
     if (pokemon) {
       setPokedexList([...pokedexList, pokemon]);
+      setOpenModal(true);
     }
   };
 
@@ -81,6 +83,8 @@ const GlobalState = ({ children }) => {
     removePokemonFromPokedex,
     isPokemonInPokedex,
     setPokemonTypeColors,
+    setOpenModal,
+    openModal,
   };
   return (
     <GlobalContext.Provider value={data}>{children}</GlobalContext.Provider>
