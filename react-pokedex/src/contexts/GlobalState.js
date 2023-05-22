@@ -8,6 +8,7 @@ const GlobalState = ({ children }) => {
   const [activePokemon, setActivePokemon] = useState({});
   const [pokedexList, setPokedexList] = useState([]);
   const [openModal, setOpenModal] = useState(false);
+  const [modalMessage, setModalMessage] = useState("");
 
   useEffect(() => {
     getAllPokemons();
@@ -46,6 +47,7 @@ const GlobalState = ({ children }) => {
     deletePokemonFromList(pokemon, pokeList, setPokeList);
     if (pokemon) {
       setPokedexList([...pokedexList, pokemon]);
+      setModalMessage("addPokemon");
       setOpenModal(true);
     }
   };
@@ -56,6 +58,8 @@ const GlobalState = ({ children }) => {
     auxArray.push(pokemon);
     auxArray.sort((a, b) => a.id - b.id);
     setPokeList(auxArray);
+    setOpenModal(true);
+    setModalMessage("removePokemon");
   };
 
   const deletePokemonFromList = (pokemon, pokemonArray, setPokemonArray) => {
@@ -85,6 +89,7 @@ const GlobalState = ({ children }) => {
     setPokemonTypeColors,
     setOpenModal,
     openModal,
+    modalMessage,
   };
   return (
     <GlobalContext.Provider value={data}>{children}</GlobalContext.Provider>

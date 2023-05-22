@@ -9,7 +9,7 @@ import { GlobalContext } from "../../contexts/GlobalContext";
 
 const Modal = () => {
   const context = useContext(GlobalContext);
-  const { openModal, setOpenModal } = context;
+  const { openModal, setOpenModal, modalMessage } = context;
   let modalRef = useRef();
 
   useEffect(() => {
@@ -23,12 +23,27 @@ const Modal = () => {
       document.removeEventListener("mousedown", handler);
     };
   });
+
+  const HeadingMessage =
+    modalMessage === "addPokemon"
+      ? "Gotcha!"
+      : modalMessage === "removePokemon"
+      ? "Oh, no!"
+      : null;
+
+  const SmallMessage =
+    modalMessage === "addPokemon"
+      ? "O Pokémon foi adicionado a sua Pokédex!"
+      : modalMessage === "removePokemon"
+      ? "O Pokémon foi removido da sua Pokedéx"
+      : null;
+
   if (openModal) {
     return (
       <ModalBackground>
         <ModalContainer ref={modalRef}>
-          <HeadingText>Gotcha!</HeadingText>
-          <SmallText>O Pokémon foi adicionado a sua Pokédex</SmallText>
+          <HeadingText>{HeadingMessage}</HeadingText>
+          <SmallText>{SmallMessage}</SmallText>
         </ModalContainer>
       </ModalBackground>
     );
