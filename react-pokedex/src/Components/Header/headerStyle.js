@@ -7,6 +7,9 @@ export const HeaderContainer = styled.header`
   background-color: #fff;
   height: 10rem;
   padding: 2rem 4rem;
+  @media (max-width: 500px) {
+    padding-inline: 1rem;
+  }
 `;
 
 export const PokemonLogo = styled.img`
@@ -30,6 +33,10 @@ export const HomeButton = styled.button`
   text-decoration: underline;
   border: none;
   cursor: pointer;
+  @media (max-width: 800px) {
+    margin-inline: auto 0;
+    font-size: 0.8rem;
+  }
 `;
 
 export const PokedexButton = styled.button`
