@@ -14,6 +14,11 @@ export const PokemonLogo = styled.img`
   position: absolute;
   left: 50%;
   transform: translate(-50%, 0);
+  @media (max-width: 800px) {
+    width: 8rem;
+    transform: translate(0, 0);
+    left: 1.5rem;
+  }
 `;
 
 export const HomeButton = styled.button`
@@ -45,6 +50,10 @@ export const PokedexButton = styled.button`
     background-color: #fff;
     color: #33a4f5;
     border: 1px solid #33a4f5;
+  }
+  @media (max-width: 800px) {
+    padding: 0.5rem 1.2rem;
+    font-size: 0.9rem;
   }
 `;
 export const RemoveFromPokedex = styled.button`
