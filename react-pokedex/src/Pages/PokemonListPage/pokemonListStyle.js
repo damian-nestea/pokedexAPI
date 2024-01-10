@@ -7,6 +7,9 @@ export const ListContainer = styled.section`
   justify-content: space-evenly;
   gap: 1.8rem;
   padding: 2rem;
+  @media (max-width: 500px) {
+    padding-inline: 1rem;
+  }
 `;
 export const TituloPokemonList = styled.h1`
   font-family: "Poppins";
@@ -15,4 +18,8 @@ export const TituloPokemonList = styled.h1`
   color: #fff;
   width: 100%;
   margin-bottom: 2rem;
+  @media (max-width: 500px) {
+    font-size: 1.2rem;
+    text-align: center;
+  }
 `;
