@@ -19,12 +19,26 @@ export const DetailsContainer = styled.section`
   border-radius: 2rem;
   display: flex;
   gap: 2rem;
+  @media (max-width: 1400px) {
+    display: grid;
+    grid-template-areas: "photo moves" "stats moves" "stats moves" "stats moves" "stats moves";
+  }
+  @media (max-width: 1100px) {
+    column-gap: 2rem;
+    padding-inline: 2rem;
+  }
 `;
 export const PokemonBackAndFrontContainer = styled.section`
   width: 18rem;
+  height: 100%;
   display: flex;
   flex-direction: column;
   gap: 3rem;
+  grid-area: photo;
+  @media (max-width: 1400px) {
+    flex-direction: row;
+    width: 100%;
+  }
 `;
 export const PokemonBackFrontPhoto = styled.div`
   background-color: #fff;
@@ -34,9 +48,15 @@ export const PokemonBackFrontPhoto = styled.div`
   justify-content: center;
   align-items: center;
   border-radius: 0.5rem;
+  @media (max-width: 1400px) {
+    height: 9.3rem;
+  }
 `;
 export const PokemonImage = styled.img`
   width: 60%;
+  @media (max-width: 1400px) {
+    width: 90%;
+  }
 `;
 export const StatsBoxContainer = styled.section`
   background-color: #fff;
@@ -45,6 +65,10 @@ export const StatsBoxContainer = styled.section`
   flex-direction: column;
   padding: 1.5rem;
   border-radius: 0.5rem;
+  grid-area: stats;
+  @media (max-width: 1400px) {
+    width: 100%;
+  }
 `;
 export const StatsContainerTitle = styled.h2`
   font-family: "Inter";
@@ -90,6 +114,10 @@ export const BasicInfoAndMovesContainer = styled.section`
   display: flex;
   flex-direction: column;
   gap: 5rem;
+  grid-area: moves;
+  @media (max-width: 1100px) {
+    margin-left: 0;
+  }
 `;
 export const BasicInfo = styled.div`
   display: flex;
@@ -111,6 +139,9 @@ export const NomePokemon = styled.h2`
   ::first-letter {
     text-transform: uppercase;
   }
+  @media (max-width: 1400px) {
+    font-size: 1.8rem;
+  }
 `;
 export const MovesContainer = styled.div`
   background-color: #fff;
@@ -121,6 +152,9 @@ export const MovesContainer = styled.div`
   align-items: flex-start;
   padding: 1.5rem;
   border-radius: 0.5rem;
+  @media (max-width: 1400px) {
+    width: 100%;
+  }
 `;
 export const MoveItem = styled.p`
   background-color: #ececec;
@@ -143,4 +177,8 @@ export const MainImagePokemon = styled.img`
   position: absolute;
   top: -7rem;
   right: 2rem;
+  @media (max-width: 1100px) {
+    width: 12rem;
+    right: 0;
+  }
 `;
