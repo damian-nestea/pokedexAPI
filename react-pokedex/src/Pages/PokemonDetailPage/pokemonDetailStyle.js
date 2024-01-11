@@ -3,6 +3,9 @@ import styled from "styled-components";
 export const DetailsBackground = styled.div`
   background-color: #5e5e5e;
   padding: 2rem;
+  @media (max-width: 500px) {
+    padding-inline: 1rem;
+  }
 `;
 export const TituloDetails = styled.h1`
   font-family: "Poppins";
@@ -19,12 +22,36 @@ export const DetailsContainer = styled.section`
   border-radius: 2rem;
   display: flex;
   gap: 2rem;
+  @media (max-width: 1400px) {
+    display: grid;
+    grid-template-areas: "photo moves" "stats moves" "stats moves" "stats moves" "stats moves";
+  }
+  @media (max-width: 1100px) {
+    column-gap: 2rem;
+    padding-inline: 2rem;
+  }
+  @media (max-width: 800px) {
+    grid-template-areas: "moves" "photo" "stats";
+  }
+  @media (max-width: 500px) {
+    padding-inline: 1rem;
+  }
 `;
 export const PokemonBackAndFrontContainer = styled.section`
   width: 18rem;
+  height: 100%;
   display: flex;
   flex-direction: column;
   gap: 3rem;
+  grid-area: photo;
+  @media (max-width: 1400px) {
+    flex-direction: row;
+    width: 100%;
+  }
+  @media (max-width: 500px) {
+    width: 100%;
+    gap: 2rem;
+  }
 `;
 export const PokemonBackFrontPhoto = styled.div`
   background-color: #fff;
@@ -34,9 +61,21 @@ export const PokemonBackFrontPhoto = styled.div`
   justify-content: center;
   align-items: center;
   border-radius: 0.5rem;
+  @media (max-width: 1400px) {
+    height: auto;
+  }
 `;
 export const PokemonImage = styled.img`
   width: 60%;
+  @media (max-width: 1400px) {
+    width: 8rem;
+  }
+  @media (max-width: 800px) {
+    width: 7rem;
+  }
+  @media (max-width: 500px) {
+    width: 80%;
+  }
 `;
 export const StatsBoxContainer = styled.section`
   background-color: #fff;
@@ -45,11 +84,21 @@ export const StatsBoxContainer = styled.section`
   flex-direction: column;
   padding: 1.5rem;
   border-radius: 0.5rem;
+  grid-area: stats;
+  @media (max-width: 1400px) {
+    width: 100%;
+  }
+  @media (max-width: 500px) {
+    padding: 0.5rem;
+  }
 `;
 export const StatsContainerTitle = styled.h2`
   font-family: "Inter";
   align-self: flex-start;
   margin-bottom: 1.8rem;
+  @media (max-width: 800px) {
+    width: 100%;
+  }
 `;
 export const StatsContainer = styled.div`
   display: flex;
@@ -65,12 +114,24 @@ export const StatsLine = styled.div`
 export const LabelStats = styled.p`
   width: 20%;
   text-align: right;
+  @media (max-width: 900px) {
+    font-size: 0.875rem;
+  }
+  @media (max-width: 500px) {
+    font-size: 0.7rem;
+  }
 `;
 export const PointStats = styled.div`
   width: 13%;
   text-align: right;
   span {
     font-weight: bold;
+  }
+  @media (max-width: 900px) {
+    font-size: 0.875rem;
+  }
+  @media (max-width: 500px) {
+    font-size: 0.7rem;
   }
 `;
 export const StatsBarContainer = styled.div`
@@ -90,6 +151,10 @@ export const BasicInfoAndMovesContainer = styled.section`
   display: flex;
   flex-direction: column;
   gap: 5rem;
+  grid-area: moves;
+  @media (max-width: 1100px) {
+    margin-left: 0;
+  }
 `;
 export const BasicInfo = styled.div`
   display: flex;
@@ -111,6 +176,9 @@ export const NomePokemon = styled.h2`
   ::first-letter {
     text-transform: uppercase;
   }
+  @media (max-width: 1400px) {
+    font-size: 1.8rem;
+  }
 `;
 export const MovesContainer = styled.div`
   background-color: #fff;
@@ -121,6 +189,14 @@ export const MovesContainer = styled.div`
   align-items: flex-start;
   padding: 1.5rem;
   border-radius: 0.5rem;
+  @media (max-width: 1400px) {
+    width: 100%;
+  }
+  @media (max-width: 800px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
 `;
 export const MoveItem = styled.p`
   background-color: #ececec;
@@ -143,4 +219,13 @@ export const MainImagePokemon = styled.img`
   position: absolute;
   top: -7rem;
   right: 2rem;
+  @media (max-width: 1100px) {
+    width: 12rem;
+    right: 0;
+  }
+  @media (max-width: 1100px) {
+    width: 8rem;
+    right: -1rem;
+    top: -4rem;
+  }
 `;

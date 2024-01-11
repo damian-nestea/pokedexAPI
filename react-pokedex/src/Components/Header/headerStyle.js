@@ -7,6 +7,9 @@ export const HeaderContainer = styled.header`
   background-color: #fff;
   height: 10rem;
   padding: 2rem 4rem;
+  @media (max-width: 800px) {
+    padding-inline: 1rem;
+  }
 `;
 
 export const PokemonLogo = styled.img`
@@ -14,6 +17,11 @@ export const PokemonLogo = styled.img`
   position: absolute;
   left: 50%;
   transform: translate(-50%, 0);
+  @media (max-width: 800px) {
+    width: 8rem;
+    transform: translate(0, 0);
+    left: 1.5rem;
+  }
 `;
 
 export const HomeButton = styled.button`
@@ -25,6 +33,10 @@ export const HomeButton = styled.button`
   text-decoration: underline;
   border: none;
   cursor: pointer;
+  @media (max-width: 800px) {
+    margin-inline: auto 0;
+    font-size: 0.8rem;
+  }
 `;
 
 export const PokedexButton = styled.button`
@@ -46,6 +58,10 @@ export const PokedexButton = styled.button`
     color: #33a4f5;
     border: 1px solid #33a4f5;
   }
+  @media (max-width: 800px) {
+    padding: 0.5rem 1.2rem;
+    font-size: 0.9rem;
+  }
 `;
 export const RemoveFromPokedex = styled.button`
   background-color: #ff6262;
@@ -62,6 +78,19 @@ export const RemoveFromPokedex = styled.button`
     color: #ff6262;
     border: 1px solid #ff6262;
   }
+  @media (max-width: 1100px) {
+    padding: 0.5rem 1.2rem;
+    font-size: 0.9rem;
+  }
+  @media (max-width: 800px) {
+    position: absolute;
+    top: 6rem;
+    right: 1rem;
+  }
+  @media (max-width: 500px) {
+    font-size: 0.7rem;
+    padding-inline: 0.8rem;
+  }
 `;
 export const AddToPokedex = styled.button`
   background-color: #33a4f5;
@@ -77,5 +106,18 @@ export const AddToPokedex = styled.button`
     background-color: #fff;
     color: #33a4f5;
     border: 1px solid #33a4f5;
+  }
+  @media (max-width: 1100px) {
+    padding: 0.5rem 1.2rem;
+    font-size: 0.9rem;
+  }
+  @media (max-width: 800px) {
+    position: absolute;
+    top: 6rem;
+    right: 1rem;
+  }
+  @media (max-width: 500px) {
+    font-size: 0.7rem;
+    padding-inline: 0.8rem;
   }
 `;

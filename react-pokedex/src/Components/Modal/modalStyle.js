@@ -25,6 +25,10 @@ export const ModalContainer = styled.article`
   align-items: center;
   justify-content: center;
   border-radius: 1rem;
+  @media (max-width: 450px) {
+    width: 90%;
+    padding: 1rem;
+  }
 `;
 
 export const HeadingText = styled.p`
@@ -35,4 +39,7 @@ export const HeadingText = styled.p`
 export const SmallText = styled.p`
   font-size: 1rem;
   font-weight: 700;
+  @media (max-width: 450px) {
+    text-align: center;
+  }
 `;

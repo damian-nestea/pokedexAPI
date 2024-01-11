@@ -17,4 +17,8 @@ export const TituloPokedex = styled.h1`
   color: #fff;
   width: 100%;
   margin-bottom: 2rem;
+  @media (max-width: 500px) {
+    font-size: 1.2rem;
+    text-align: center;
+  }
 `;

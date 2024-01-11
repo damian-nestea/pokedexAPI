@@ -36,6 +36,9 @@ export const Image = styled.img`
   position: absolute;
   top: -2rem;
   right: 1rem;
+  @media (max-width: 500px) {
+    width: 6.5rem;
+  }
 `;
 export const DetailsLink = styled.a`
   font-family: "Poppins";
