@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { fadeInModal } from "../../utils/Animation";
 
 export const ModalBackground = styled.div`
   background-color: rgb(0, 0, 0, 0.6);
@@ -25,6 +26,7 @@ export const ModalContainer = styled.article`
   align-items: center;
   justify-content: center;
   border-radius: 1rem;
+  animation: ${fadeInModal} .6s ease-in-out forwards;
   @media (max-width: 450px) {
     width: 90%;
     padding: 1rem;

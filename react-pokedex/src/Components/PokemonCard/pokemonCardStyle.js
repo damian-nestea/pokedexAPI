@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { fadeIn } from "../../utils/Animation";
 
 export const PokemonCardContainer = styled.article`
   position: relative;
@@ -11,6 +12,7 @@ export const PokemonCardContainer = styled.article`
   padding: 1.2rem;
   border-radius: 1rem;
   transition: 0.8s;
+  animation: ${fadeIn} .2s ease-in-out backwards;
   :hover {
     border: 1px solid #aaa;
   }
@@ -36,6 +38,8 @@ export const Image = styled.img`
   position: absolute;
   top: -2rem;
   right: 1rem;
+  animation: ${fadeIn} .6s ease-in-out backwards;
+
   @media (max-width: 500px) {
     width: 6.5rem;
   }

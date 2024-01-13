@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { fadeIn, fadeInDetails } from "../../utils/Animation";
 
 export const DetailsBackground = styled.div`
   background-color: #5e5e5e;
@@ -44,6 +45,7 @@ export const PokemonBackAndFrontContainer = styled.section`
   flex-direction: column;
   gap: 3rem;
   grid-area: photo;
+  animation: ${fadeInDetails} .2s ease-in-out backwards;
   @media (max-width: 1400px) {
     flex-direction: row;
     width: 100%;
@@ -85,6 +87,8 @@ export const StatsBoxContainer = styled.section`
   padding: 1.5rem;
   border-radius: 0.5rem;
   grid-area: stats;
+  animation: ${fadeInDetails} .2s .2s ease-in-out backwards;
+
   @media (max-width: 1400px) {
     width: 100%;
   }
@@ -152,6 +156,8 @@ export const BasicInfoAndMovesContainer = styled.section`
   flex-direction: column;
   gap: 5rem;
   grid-area: moves;
+  animation: ${fadeInDetails} .2s .4s ease-in-out backwards;
+
   @media (max-width: 1100px) {
     margin-left: 0;
   }
@@ -219,6 +225,7 @@ export const MainImagePokemon = styled.img`
   position: absolute;
   top: -7rem;
   right: 2rem;
+  animation: ${fadeIn} .2s .6s ease-in-out backwards;
   @media (max-width: 1100px) {
     width: 12rem;
     right: 0;
