@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { fadeIn, fadeInHome } from "../../utils/Animation";
 
 export const HeaderContainer = styled.header`
   display: flex;
@@ -33,6 +34,7 @@ export const HomeButton = styled.button`
   text-decoration: underline;
   border: none;
   cursor: pointer;
+  animation: ${fadeInHome} .6s ease-in-out backwards;
   @media (max-width: 800px) {
     margin-inline: auto 0;
     font-size: 0.8rem;
@@ -53,6 +55,7 @@ export const PokedexButton = styled.button`
   right: 5%;
   transform: translate(-5%, 0);
   transition: 0.8s;
+  animation: ${fadeIn} .2s ease-in-out backwards;
   :hover {
     background-color: #fff;
     color: #33a4f5;

@@ -2,9 +2,9 @@
 
 Projeto em ReactJS com Styled-components e consumo da API PokéAPI com renderização de Pokémons, opção de visualização de detalhes, captura de Pokémons e remoção dos mesmos da Pokédex.
 
-> :construction: Projeto em construção... :construction:
+> 🏁 Projeto Finalizado 🏁
 
-# :hammer: Funcionalidades do projeto
+# 🛠️ Funcionalidades do projeto
 
 - `1`: Visualização da lista de Pokémons na HomePage.
 - `2`: Adição de Pokémons na Pokédex a partir da HomePage.
@@ -14,6 +14,7 @@ Projeto em ReactJS com Styled-components e consumo da API PokéAPI com renderiza
 - `6`: Adição de Pokémons na Pokédex a partir da PokedexPage.
 - `7`: Remoção de Pokémons na Pokedex a partir da PokedexPage.
 - `8`: Na tela de Detalhes do Pokémon é possível adicionar/remover o mesmo da Pokédex.
+- `9`: Projeto Responsivo
 
 
 ### 🛠 Tecnologias
@@ -22,7 +23,7 @@ Projeto em ReactJS com Styled-components e consumo da API PokéAPI com renderiza
 - styled-components
 
 ### Link Projeto
-https://pokedex-project-damian.surge.sh/
+https://pokedex-react-apis-project.vercel.app/
 
 ### Autor
 Desenvolvido por Jair Damián Martínez!

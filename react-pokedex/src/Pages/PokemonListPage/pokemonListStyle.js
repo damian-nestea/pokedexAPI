@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { fadeInAllPokemons } from "../../utils/Animation";
 
 export const ListContainer = styled.section`
   background-color: #5e5e5e;
@@ -18,6 +19,7 @@ export const TituloPokemonList = styled.h1`
   color: #fff;
   width: 100%;
   margin-bottom: 2rem;
+  animation: ${fadeInAllPokemons} .6s ease-in-out backwards;
   @media (max-width: 500px) {
     font-size: 1.2rem;
     text-align: center;
